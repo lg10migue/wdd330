@@ -1,0 +1,38 @@
+/* HTML */
+
+html {
+	font-family: "Open Sans", sans-serif ;
+	font-size: 16px ;
+}
+
+/* Body */
+
+body {
+    min-height: 100vh ;
+    display: flex ;
+    flex-direction: column ;
+}
+
+/* Header */
+
+header, footer {
+    text-align: center ;
+	background-color: lightskyblue ;
+}
+
+/* Main */
+
+main {
+    text-align: center ;
+}
+
+ol {
+    list-style: none ;
+}
+
+/* Footer */
+
+footer {
+    padding: 1em ;
+    margin-top: auto ;
+}
