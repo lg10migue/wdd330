@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Notes</title>
+    <link href="css/notes.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <h1>LocalStorage</h1>
+        <p>Web storage objects <code>localStorage</code> and <code>sessionStorage</code> allow to save key/value pairs in the browser.</p>
+        <p>What’s interesting about them is that the data survives a page refresh (for <code>sessionStorage</code>) and even a full browser restart (for <code>localStorage</code>). We’ll see that very soon.</p>
+        <p>We already have cookies. Why additional objects?</p>
+        <ul>
+            <li>Unlike cookies, web storage objects are not sent to server with each request. Because of that, we can store much more. Most modern browsers allow at least 5 megabytes of data (or more) and have settings to configure that.</li>
+            <li>Also unlike cookies, the server can’t manipulate storage objects via HTTP headers. Everything’s done in JavaScript.</li>
+            <li>The storage is bound to the origin (domain/protocol/port triplet). That is, different protocols or subdomains infer different storage objects, they can’t access data from each other.</li>
+        </ul>
+        <p>Both storage objects provide same methods and properties:</p>
+        <ul>
+            <li><code>setItem(key, value)</code> – store key/value pair.</li>
+            <li><code>getItem(key)</code> – get the value by key.</li>
+            <li><code>removeItem(key)</code> – remove the key with its value.</li>
+            <li><code>clear()</code> – delete everything.</li>
+            <li><code>key(index)</code> – get the key on a given position.</li>
+            <li><code>length</code> – the number of stored items.</li>
+        </ul>
+        <h1>Master Mobile UX</h1>
+        <p>These are some of the things that we have to take into account to:</p>
+        <ul>
+            <li>We have to understand that the mobile device business is growing remarkably, even above desktop computers and laptops.</li>
+            <li>To create better designs, we must first understand users and give them what they need.</li>
+            <li>We must create better mobile layouts with strategic menu designs.</li>
+            <li>We have to design intuitive and mobile friendly forms.</li>
+            <li>Last but not least, you have to design better mobile advertising user experience.</li>
+        </ul>
+
+        <h2>Questions:</h2>
+        <p>What exactly is Mobile UX?</p>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
