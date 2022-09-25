@@ -1,16 +1,37 @@
-// Dynamic Table of Contents
+// Dynamic Table of Contents.
 
 const links = [
     {
         label : "Week 1",
         contents : [
             {
-                label : "Story Editor",
-                url : "week1/story_editor.html"
-            },
-            {
                 label : "Notes",
                 url : "week1/notes.html"
+            },
+            {
+                label : "Story Editor",
+                url : "week1/story_editor.html"
+            }
+        ]
+    },
+    {
+        label : "Week 2",
+        contents : [
+            {
+                label : "Notes",
+                url : "week2/notes.html"
+            },
+            {
+                label : "Ch2: Quiz Ninja",
+                url : "week2/ch2_quiz_ninja.html"
+            },
+            {
+                label : "Ch3: Quiz Ninja",
+                url : "week2/ch3_quiz_ninja.html"
+            },
+            {
+                label : "Team Activity",
+                url : "week2/team_activity.html"
             }
         ]
     }
@@ -24,6 +45,7 @@ function createTableOfContents( links ) {
 
         // Create h2 element for label name.
         let h2 = document.createElement( "h2" ) ;
+        h2.classList.toggle( "collapsible" ) ;
         h2.innerHTML = link.label ;
 
         // Attach h2 element to main.
@@ -53,4 +75,19 @@ function createTableOfContents( links ) {
 
         } ) ;
     } ) ;
+} ;
+
+// Create collapsible buttons.
+let collapsibleButton = document.getElementsByClassName( "collapsible" ) ;
+
+for ( let i = 0 ; i < collapsibleButton.length ; i++ ) {
+  collapsibleButton[i].addEventListener( "click", function() {
+    this.classList.toggle( "active" ) ;
+    let content = this.nextElementSibling ;
+    if ( content.style.display === "block" ){
+      content.style.display = "none" ;
+    } else {
+      content.style.display = "block" ;
+    }
+  } ) ;
 } ;

@@ -20,33 +20,6 @@ header, footer {
 	background-color: lightskyblue ;
 }
 
-/* Main */
-
-main {
-    margin: 0 auto ;
-}
-
-main h2 {
-    text-align: center ;
-    cursor: pointer ;
-    padding: 5px ;
-    background-color: rgb(83, 189, 255) ;
-    margin: 0 ;
-}
-
-main h2:hover {
-    background-color: rgb(168, 220, 252) ;
-}
-
-.active {
-    text-align: left ;
-}
-
-ol {
-    list-style: none ;
-    display: none ;
-}
-
 /* Footer */
 
 footer {
