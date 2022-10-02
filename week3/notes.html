@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Object Methods: "this".</h1>
+            <h2>Objects</h2>
+            <p>
+                Objects are created to represent entities of the real world. Actions are represented by functions
+                in properties called methods.
+            </p>
+            <h2>Method Examples</h2>
+            <p>
+                We can allow or teach objects to "act" with methods ( object.doSomething() ). There are some ways to
+                do this, for example, we can use <b>Function Expression</b>, <b>Pre-declared Functions</b> and
+                <b>Method Shorthand</b>.
+            </p>
+            <h2>"this" in methods</h2>
+            <p>
+                To access the object, a method can use the <b>this</b> keyword. The value of <b>this</b> is the object
+                "before dot", the one used to call the method.
+            </p>
+            <h2>"this" is not bound</h2>
+            <p>
+                The keyword <b>this</b> can be used in any function, eve if it is not a method of an object. The value
+                of <b>this</b> is defined at run-time.
+            </p>
+        </div>
+        <div>
+            <h1>"this" in JavaScript.</h1>
+            <h2>This in a Global Context</h2>
+            <p>
+                When <b>this</b> is called outside any object, it is in global context, so this defaults to the
+                <i>Window</i> object in the browser.
+            </p>
+            <h2>This in Object Construction</h2>
+            <p>
+                When we create a new instance of an object with the <b>new</b> keyword, <b>this</b> refers to the
+                instance.
+            </p>
+            <h2>This in an Object Method</h2>
+            <p>
+                <b>this</b> within any method refers to the object itself. Since <b>this</b> refers to the object, we
+                can use methods to get instance of an object.
+            </p>
+            <h2>This in a Simple Function</h2>
+            <p>
+                On browsers, <b>this</b> is always set to <i>Window</i> in a simple function. Even if we call a simple
+                function in an object method.
+            </p>
+            <h2>This in Arrow Functions</h2>
+            <p>
+                <b>this</b> in an arrow function is always the same as <b>this</b> around it. If we use arrow functions,
+                within an object method, the <b>this</b> context stays as the object.
+            </p>
+            <h2>This in Event Listeners</h2>
+            <p>
+                <b>this</b> is set to the HTML element that fired the event in an event listener.
+            </p>
+        </div>
+        <div>
+            <h1>Ch5: Objects.</h1>
+            <h2>Objects Literals</h2>
+            <p>
+                An object literal is an object that is created directly in the language by wrapping all its properties
+                and methods in curly braces <b>{}</b>. Nested objects can be created by placing objects inside objects.
+            </p>
+            <p>
+                Objects are a collection of key-value pairs inside curly braces <b>{}</b>. Objects have properties that
+                can be any JavaScript value. If it is a function, it is known as a <i>method</i>.
+            </p>
+            <p>ES6 provide a Shorthand method of creating objects if a property key is the same as a variable name that
+                the property value is assigned to.
+            </p>
+            <h2>Accesing Properties</h2>
+            <p>
+                An object's properties and methods can be accessed using either dot notation or square bracket notation.
+            </p>
+            <h2>Adding Properties</h2>
+            <p>
+                Objects are mutable, which means their properties and methods can be changed or removed.
+            </p>
+            <h2>Objects as Parameters to Functions</h2>
+            <p>
+                Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.
+            </p>
+            <h2>Namespacing</h2>
+            <p>
+                A namespace is a <b>object literal pattern</b> for groups of related functions.
+            </p>
+            <h2>JSON</h2>
+            <p>
+                JSON is a portable data format that uses string representation of JavaScript object literals to exchange
+                information. A notable difference between them is JSON property names must be double-quoted.
+            </p>
+            <h2>The Math Object</h2>
+            <p>
+                The <b>Math</b> object gives access to a number of mathematical constants. It is used to perform
+                mathematical operations.
+            </p>
+            <h2>The Date Object</h2>
+            <p>
+                The <b>Date</b> object can be used to create date objects. Setter methods can be used to change the
+                information about that date.
+            </p>
+            <h2>The RegExp Object</h2>
+            <p>
+                The <b>Regex</b> object can be used to create regular expressions.
+            </p>
+            <p>
+                <b>Special Characters:</b>
+            </p>
+            <ul>
+                <li><b>.</b> matches any character, except line breaks.</li>
+                <li><b>\w</b> matches any word character, and is equivalent to <b>[A-Za-z0-9_]</b>.</li>
+                <li><b>\W</b> matches any non-word character, and is equivalent to <b>[\^A-Za-z0-9_]</b>.</li>
+                <li><b>\d</b> matches any digit character, and is equivalent to <b>[0-9]</b>.</li>
+                <li><b>\D</b> matches any non-digit character, and is equivalent to <b>[^0-9]</b>.</li>
+                <li><b>\s</b> matches any whitespace character, and is equivalent to <b>[ \t\r\n\f]</b>.</li>
+                <li><b>\S</b> matches any non-whitespace character, and is equivalent to <b>[^ \t\r\n\f]</b>.</li>
+            </ul>
+            <p>
+                <b>Modifiers:</b>
+            </p>
+            <ul>
+                <li><b>?</b> makes the preceding token in the regular expression optional.</li>
+                <li><b>*</b> matches one or more occurrences of the preceding token.</li>
+                <li><b>+</b> matches one or more occurrences of the preceding token.</li>
+                <li><b>{n}</b> matches n occurrences of the preceding token.</li>
+                <li><b>{n,}</b> matches at least n occurrences of the pattern.</li>
+                <li><b>{,m}</b> matches at most m occurrences of the preceding token.</li>
+                <li><b>{n,m}</b> matches at least n and at most m occurrences of the preceding token.</li>
+                <li><b>^</b> marks the position immediately before the first character in the string.</li>
+                <li><b>$</b> marks the position immediately after the last character in the string.</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Ch6: The Document Object Model.</h1>
+            <h2>What is the DOM?</h2>
+            <p>
+                The Document Object Model is a way of representing a page of HTML as a tree of nodes.
+            </p>
+            <h2>An Example Web Page </h2>
+            <section>
+                <h3 id='title'>Justice League</h3>
+                <ul id='roster'>
+                    <li class='hero'>Superman</li>
+                    <li class='vigilante hero' id='bats'>Batman</li>
+                    <li class='hero'>Wonder Woman</li>
+                </ul>
+            </section>
+            <h2>Getting Elements</h2>
+            <p>
+                The DOM provides several methods to acces any element on a page. 
+            </p>
+            <p>
+                All nodes have a numberical code to signify what type they are. These are summarized
+                in the next table:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>element</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>attribute</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>text</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>comment</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>body</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                The <b>document.getElementById()</b>, <b>document.getElementsByClassName()</b>,
+                <b>document.getElementsByTagNames()</b> and <b>document.querySelector()</b> can be used to access
+                elements on a page.
+            </p>
+            <h2>Navigating the DOM Tree</h2>
+            <p>
+                The <b>parentNode()</b>, <b>previousSibling()</b>, <b>nextSibling()</b>, <b>childNodes()</b>
+                and <b>children()</b> methods can be used to navigate around the DOM tree.
+            </p>
+            <h2>Getting and Setting Attributes</h2>
+            <p>
+                An element’s attributes can be accessed using the <b>getAttribute()</b> method, and updated
+                using the <b>setAttribute()</b> method.
+            </p>
+            <h2>Classes Of An Element</h2>
+            <p>
+                <b>.className</b>
+            </p>
+            <p>
+                Using <b>.className</b> property allows the class of an element to be set directly.
+            </p>
+            <p>
+                <b>.classList</b>
+            </p>
+            <p>
+                The <b>.classList</b> property is a list of all the classes an element has. It has methods that make
+                easier to modify the class of an element.
+            </p>
+            <p>
+                The <b>add()</b> method can be used to add a class to an element whitout overwriting any classes that
+                already exists.
+            </p>
+            <p>
+                The <b>remove()</b> method will remove a specific class from an element.
+            </p>
+            <p>
+                The <b>toggle()</b> method will add a class if an element doesn't have it already, and remove the
+                class if it does have it.
+            </p>
+            <p>
+                The <b>contains()</b> method will check if an element has a particular class.
+            </p>
+            <h2>Creating Dynamic Markup</h2>
+            <p>
+                The <b>createElement()</b> and <b>createTextNode()</b> methods can be used to create dynamic
+                markup on the fly.
+            </p>
+            <p>
+                Markup can be added to the page using the <b>appendChild()</b> and <b>insertBefore()</b> methods.
+            </p>
+            <p>
+                Elements can be replaced using the <b>replaceChild()</b> method, and removed using the
+                <b>removeChild()</b> method.
+            </p>
+            <p>
+                The innerHTML property can be used to insert raw HTML directly into the DOM.
+            </p>
+            <h2>Updating CSS</h2>
+            <p>
+                The CSS properties of an element can be changed by accessing the style property.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/obj_methods_this.js"></script>
+    <script src="js/this_js.js"></script>
+    <script src="js/ch5.js"></script>
+    <script src="js/ch6.js"></script>
+</body>
+</html>

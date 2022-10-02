@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Exercises</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercises</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch14: The Document Object Model</h1>
+            <h2>Build A Table</h2>
+            <p>
+                An HTML table is built with the following tag structure:
+            </p>
+            <p>
+                <pre>
+                    &lttable&gt
+                        &lttr&gt
+                        &ltth&gtname&lt/th&gt
+                        &ltth&gtheight&lt/th&gt
+                        &ltth&gtplace&lt/th&gt
+                        &lt/tr&gt
+                        &lttr&gt
+                        &lttd&gtKilimanjaro&lt/td&gt
+                        &lttd&gt5895&lt/td&gt
+                        &lttd&gtTanzania&lt/td&gt
+                        &lt/tr&gt
+                    &lt/table&gt
+                </pre>
+            </p>
+            <p>
+                For each row, the  &lttable&gt tag contains a  &lttr&gt tag. Inside of these  &lttr&gt tags,
+                we can put cell elements: either heading cells ( &ltth&gt) or regular cells ( &lttd&gt).                    
+            </p>
+            <p>
+                Given a data set of mountains, an array of objects with name, height, and
+                place properties, generate the DOM structure for a table that enumerates the
+                objects. It should have one column per key and one row per object, plus a
+                header row with &ltth&gt elements at the top, listing the column names.
+            </p>
+            <p>
+                Write this so that the columns are automatically derived from the objects,
+                by taking the property names of the first object in the data.
+            </p>
+            <p>
+                Add the resulting table to the element with an id attribute of "mountains"
+                so that it becomes visible in the document.
+            </p>
+            <p>
+                Once you have this working, right-align cells that contain number values by
+                setting their style.textAlign property to "right".
+            </p>
+            <section>
+                <h1>Mountains</h1>
+                <div id="mountains"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/exercises.js"></script>
+</body>
+</html>

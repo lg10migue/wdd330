@@ -5,123 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 Notes</title>
-    <link href="css/notes.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Notes</h1>
     </header>
     <main>
-        <h1>Ch2: Programming basics.</h1>
-        <h2>Comments</h2>
-        <p>
-            Comments are essential to make our programs easy to read and understand.
-        </p>
-        <h2>Primitive Data Types</h2>
-        <p>
-            There are six primitive data types.
-        </p>
-        <ul>
-            <li>String</li>
-            <li>Symbol</li>
-            <li>Number</li>
-            <li>Boolean</li>
-            <li>Undefined</li>
-            <li>Null</li>
-        </ul>
-        <h2>Template Literals</h2>
-        <p>
-            Use the <b>`</b> to deliminate the string. They also allow interpolation of JavaScript code.
-        </p>
-        <h2>Non-primitive Data Type</h2>
-        <p>
-            Non-primitive data types, such as arrays, functions and objects, all have a type of "object".
-        </p>
-        <h2>Variables</h2>
-        <p>
-            Variables must be assigned before being used. Variables point to values stored in memory and are declared using the "const", "let" or "var" keywords. It is important to give variables sensible names that describe what they mean. JavaScript uses the camel-case notation to name variables and is the most recommended way to go, however, the most important thing is to be consistent in the method you use.
-        </p>
-        <h2>Properties and Methods</h2>
-        <p>
-            Strings and Numbers have various properties and methods that provide information about them or perform action on the object or value. For example: trim() method will remove any whitespace from te beginning and end of a string.
-        </p>
-        <h2>Symbols</h2>
-        <p>
-            Symbols are unique, inmutable values that helps to avoid naming collisions.
-        </p>
-        <h2>Boolean</h2>
-        <p>
-            Values that can be "true" or "false".
-        </p>
-        <h2>Falsy Values</h2>
-        <p>
-            JavaScript have nine values that are <b>false</b>.
-        </p>
-        <h2>Type Coercion</h2>
-        <p>
-            This is when JavaScript convert a value into another data type to perform an operation.
-        </p>
-        <h1>Ch3: Arrays, Logic, and Loops.</h1>
-        <h2>Arrays</h2>
-        <p>
-            Arrays are ordered list of values or objects. They have a lot of methods that can be used to manipulate them.
-        </p>
-        <h2>Multidimensional Arrays</h2>
-        <p>
-            Multidimensional arrays are arrays that contain other arrays.
-        </p>
-        <h2>Sets</h2>
-        <p>
-            Set are ordered lists of non-duplicate values.
-        </p>
-        <h2>Maps</h2>
-        <p>
-            Maps are ordered lists of key-value pairs.
-        </p>
-        <h2>Logic</h2>
-        <p>
-            We can use conditionals ( <b>if</b>>, <b>else</b>> ) to control the flow of code.
-        </p>
-        <p>
-            The <b>switch</b> statement can be used to avoid the use of a lot <b>if</b> and <b>else</b> statements.
-        </p>
-        <h2>Loops</h2>
-        <p>
-            A <b>while</b> loop and <b>do ... while</b> loop, can be used to repeat a block of code while a condition is still true.
-        </p>
-        <p>
-            A <b>for</b> loop, have different sintax of a <b>while</b> loop but works in similar way.
-        </p>
-        <p>
-            A <b>for-of</b> loop, can be use to iterate over arrays, sets and maps.
-        </p>
-        <h1>Ch4: Functions.</h1>
-        <h2>Functions</h2>
-        <p>
-            Functions are small parts of code that can be referenced by a name. Functions help to reduce repetition and make code easier to follow.
-        </p>
-        <h2>DRY</h2>
-        <p>
-            Stands for "Don't Repeat Yourself", is a principle of programming that specifies that every part of a program should only be written once. This avoids duplication and means there's no need to keep multiple pieces of code up to date and in sync.
-        </p>
-        <h2>Return Values</h2>
-        <p>
-            All functions return a value. If this is not explicitly stated, the function will return <b>undefined</b>.
-        </p>
-        <h2>Parameters and Arguments</h2>
-        <p>
-            A parameter is a value that is written in the function declaration and can be used like a variable inside the function's body.
-        </p>
-        <p>
-            An argument is a value that is provide to a function when it is invoked.
-        </p>
-        <p>
-            Default arguments can be supplied to a function by assigning them to the parameters.
-        </p>
-        <h2>Callbacks</h2>
-        <p>
-            A callback is a function that is provided as an argument to another function.
-        </p>
+        <div>
+            <h1>Ch2: Programming basics.</h1>
+            <h2>Comments</h2>
+            <p>
+                Comments are essential to make our programs easy to read and understand.
+            </p>
+            <h2>Primitive Data Types</h2>
+            <p>
+                There are six primitive data types.
+            </p>
+            <ul>
+                <li>String</li>
+                <li>Symbol</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+                <li>Null</li>
+            </ul>
+            <h2>Template Literals</h2>
+            <p>
+                Use the <b>`</b> to deliminate the string. They also allow interpolation of JavaScript code.
+            </p>
+            <h2>Non-primitive Data Type</h2>
+            <p>
+                Non-primitive data types, such as arrays, functions and objects, all have a type of "object".
+            </p>
+            <h2>Variables</h2>
+            <p>
+                Variables must be assigned before being used. Variables point to values stored in memory and are declared using the "const", "let" or "var" keywords. It is important to give variables sensible names that describe what they mean. JavaScript uses the camel-case notation to name variables and is the most recommended way to go, however, the most important thing is to be consistent in the method you use.
+            </p>
+            <h2>Properties and Methods</h2>
+            <p>
+                Strings and Numbers have various properties and methods that provide information about them or perform action on the object or value. For example: trim() method will remove any whitespace from te beginning and end of a string.
+            </p>
+            <h2>Symbols</h2>
+            <p>
+                Symbols are unique, inmutable values that helps to avoid naming collisions.
+            </p>
+            <h2>Boolean</h2>
+            <p>
+                Values that can be "true" or "false".
+            </p>
+            <h2>Falsy Values</h2>
+            <p>
+                JavaScript have nine values that are <b>false</b>.
+            </p>
+            <h2>Type Coercion</h2>
+            <p>
+                This is when JavaScript convert a value into another data type to perform an operation.
+            </p>
+        </div>
+        <div>
+            <h1>Ch3: Arrays, Logic, and Loops.</h1>
+            <h2>Arrays</h2>
+            <p>
+                Arrays are ordered list of values or objects. They have a lot of methods that can be used to manipulate them.
+            </p>
+            <h2>Multidimensional Arrays</h2>
+            <p>
+                Multidimensional arrays are arrays that contain other arrays.
+            </p>
+            <h2>Sets</h2>
+            <p>
+                Set are ordered lists of non-duplicate values.
+            </p>
+            <h2>Maps</h2>
+            <p>
+                Maps are ordered lists of key-value pairs.
+            </p>
+            <h2>Logic</h2>
+            <p>
+                We can use conditionals ( <b>if</b>>, <b>else</b>> ) to control the flow of code.
+            </p>
+            <p>
+                The <b>switch</b> statement can be used to avoid the use of a lot <b>if</b> and <b>else</b> statements.
+            </p>
+            <h2>Loops</h2>
+            <p>
+                A <b>while</b> loop and <b>do ... while</b> loop, can be used to repeat a block of code while a condition is still true.
+            </p>
+            <p>
+                A <b>for</b> loop, have different sintax of a <b>while</b> loop but works in similar way.
+            </p>
+            <p>
+                A <b>for-of</b> loop, can be use to iterate over arrays, sets and maps.
+            </p>
+        </div>
+        <div>
+            <h1>Ch4: Functions.</h1>
+            <h2>Functions</h2>
+            <p>
+                Functions are small parts of code that can be referenced by a name. Functions help to reduce repetition and make code easier to follow.
+            </p>
+            <h2>DRY</h2>
+            <p>
+                Stands for "Don't Repeat Yourself", is a principle of programming that specifies that every part of a program should only be written once. This avoids duplication and means there's no need to keep multiple pieces of code up to date and in sync.
+            </p>
+            <h2>Return Values</h2>
+            <p>
+                All functions return a value. If this is not explicitly stated, the function will return <b>undefined</b>.
+            </p>
+            <h2>Parameters and Arguments</h2>
+            <p>
+                A parameter is a value that is written in the function declaration and can be used like a variable inside the function's body.
+            </p>
+            <p>
+                An argument is a value that is provide to a function when it is invoked.
+            </p>
+            <p>
+                Default arguments can be supplied to a function by assigning them to the parameters.
+            </p>
+            <h2>Callbacks</h2>
+            <p>
+                A callback is a function that is provided as an argument to another function.
+            </p>
+        </div>
     </main>
     <footer>
         <p>

@@ -34,11 +34,44 @@ const links = [
                 url : "week2/ch4_quiz_ninja.html"
             },
             {
+                label : "Exercises",
+                url : "week2/exercises.html"
+            },
+            {
                 label : "Team Activity",
                 url : "week2/team_activity.html"
+            },
+        ]
+    },
+    {
+        label : "Week 3",
+        contents : [
+            {
+                label : "Notes",
+                url : "week3/notes.html"
+            },
+            {
+                label : "Ch5: Quiz Ninja",
+                url : "week3/ch5_quiz_ninja.html"
+            },
+            {
+                label : "Ch6: Quiz Ninja",
+                url : "week3/ch6_quiz_ninja.html"
+            },
+            {
+                label : "Exercises",
+                url : "week3/exercises.html"
+            },
+            {
+                label : "Team Activity",
+                url : "week3/team_activity.html"
+            },
+            {
+                label : "Team Activity Part 2",
+                url : "week3/team_activity2.html"
             }
         ]
-    }
+    },
 ] ;
 
 createTableOfContents( links ) ;

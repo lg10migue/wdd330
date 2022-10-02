@@ -27,7 +27,6 @@ function start( quiz ) {
     // Check if answer is correct.
     if ( response === answer ) {
       alert( 'Correct!' ) ;
-      
       // Increase score by 1.
       score++ ;
     } else {
