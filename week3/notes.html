@@ -21,6 +21,17 @@
             flex-direction: column ;
         }
 
+        section p {
+            width: 200px ;
+            height: 200px ;
+            margin: 10px ;
+            background-color: #ccc ;
+        }
+
+        .highlight {
+            background-color: red ;
+        }
+
         /* Header */
 
         header, footer {
@@ -289,6 +300,81 @@
                 The CSS properties of an element can be changed by accessing the style property.
             </p>
         </div>
+        <div>
+            <h1>Ch7: Events.</h1>
+            <h2>Event Listeners</h2>
+            <p>
+                Events occurs when a user interacts with a web page. An event listener is attached to an element, then
+                invokes a callback funtion when the event occurs. To add an event listener we use
+                <b>.addEventListener()</b> method.
+            </p>
+            <h2>Example Code</h2>
+            <section style="display: flex; flex-direction: row;">
+                <p id='click'>Click On Me</p>
+                <p id='dblclick'>Double Click On Me</p>
+                <p id='mouse'>Hover On Me</p>
+                <p id='once'>A One Time Thing...</p>
+                <p>
+                    <a id='broken' href='https://sitepoint.com'>Broken Link</a>
+                </p>
+            </section>
+            <section style="display: flex; flex-direction: row; justify-content: space-around ;">
+                <div>
+                    <h2>Event Propagation</h2>
+                    <ul id='list'>
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Event Delegation</h2>
+                    <ul id='list2'>
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+                </div>
+            </section>
+            <h2>The Event Object</h2>
+            <p>
+                The event object is passed to the callback function as an argument, and contains lots of properties
+                and methods relating to the event.
+            </p>
+            <p>
+                There are many types of event, including mouse events, keyboard events, and touch events.
+            </p>
+            <h2>Removing Event Listeners</h2>
+            <p>
+                We can remove an event using the <b>removeEventListener()</b> method.
+            </p>
+            <p>
+                Note that you shouldn't use anonymous functions as an argument to <b>addEventListener()</b>
+                if you want to remove it later. This is because there needs to be a reference to the same
+                function name in the arguments of <b>removeEventListener()</b>.
+            </p>
+            <h2>Stopping Default Behavior</h2>
+            <p>
+                The default behavior of elements can be prevented using the <b>preventDefault()</b> function.
+            </p>
+            <h2>Event Propagation</h2>
+            <p>
+                Event propagation is the order the events fire on each element.
+            </p>
+            <p>
+                <b>Bubbling</b> is when the event fires on the element clicked on first, then bubbles up the
+                document tree, firing an event on each parent element until it reaches the root node.
+            </p>
+            <p>
+                <b>Capturing</b> starts by firing an event on the root element, then propagates downwards, firing
+                an event on each child element until it reaches the target element that was clicked on.
+            </p>
+            <h2>Event Delegation</h2>
+            <p>
+                Event delegation is when an event listener is added to a parent element to capture events
+                that happen to its children elements.
+            </p>
+        </div>
     </main>
     <footer>
         <p>
@@ -299,5 +385,6 @@
     <script src="js/this_js.js"></script>
     <script src="js/ch5.js"></script>
     <script src="js/ch6.js"></script>
+    <script src="js/ch7.js"></script>
 </body>
 </html>
