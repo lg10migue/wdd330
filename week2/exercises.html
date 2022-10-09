@@ -12,200 +12,206 @@
         <h1>Exercises</h1>
     </header>
     <main>
-        <h1>Ch2: Program Structure</h1>
-        <h2>Looping A Triangle</h2>
-        <p>
-            Write a loop that makes seven calls to console.log to output the following triangle:
-        </p>
-        <p>
-            <pre>
-                #
-                ##
-                ###
-                ####
-                #####
-                ######
-                #######
-            </pre>
-        </p>
-        <h2>FizzBuzz</h2>
-        <p>
-            Write a program that uses console.log to print all the numbers from 1 to 100,
-            with two exceptions. For numbers divisible by 3, print "Fizz" instead of the
-            number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
-            When you have that working, modify your program to print "FizzBuzz" for
-            numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz"
-            for numbers divisible by only one of those).
-        </p>
-        <h2>ChessBoard</h2>
-        <p>
-            Write a program that creates a string that represents an 8×8 grid, using newline
-            characters to separate lines. At each position of the grid there is either a space
-            or a "#" character. The characters should form a chessboard. Passing this string to
-            console.log should show something like this:
-        </p>
-        <p>
-            <pre>
-                 # # # #
-                # # # # 
-                 # # # #
-                # # # # 
-                 # # # #
-                # # # # 
-                 # # # #
-                # # # # 
-            </pre>
-        </p>
-        <p>
-            When you have a program that generates this pattern, define a binding size
-            = 8 and change the program so that it works for any size, outputting a grid
-            of the given width and height.
-        </p>
-        <h1>Ch3: Functions</h1>
-        <h2>Minimum</h2>
-        <p>
-            The previous chapter introduced the standard function Math.min that returns
-            its smallest argument. We can build something like that now. Write a function
-            min that takes two arguments and returns their minimum.
+        <div>
+            <h1>Ch2: Program Structure</h1>
+            <h2>Looping A Triangle</h2>
+            <p>
+                Write a loop that makes seven calls to console.log to output the following triangle:
+            </p>
+            <p>
+                <pre>
+                    #
+                    ##
+                    ###
+                    ####
+                    #####
+                    ######
+                    #######
+                </pre>
+            </p>
+            <h2>FizzBuzz</h2>
+            <p>
+                Write a program that uses console.log to print all the numbers from 1 to 100,
+                with two exceptions. For numbers divisible by 3, print "Fizz" instead of the
+                number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+                When you have that working, modify your program to print "FizzBuzz" for
+                numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz"
+                for numbers divisible by only one of those).
+            </p>
+            <h2>ChessBoard</h2>
+            <p>
+                Write a program that creates a string that represents an 8×8 grid, using newline
+                characters to separate lines. At each position of the grid there is either a space
+                or a "#" character. The characters should form a chessboard. Passing this string to
+                console.log should show something like this:
+            </p>
+            <p>
+                <pre>
+                    # # # #
+                    # # # # 
+                    # # # #
+                    # # # # 
+                    # # # #
+                    # # # # 
+                    # # # #
+                    # # # # 
+                </pre>
+            </p>
+            <p>
+                When you have a program that generates this pattern, define a binding size
+                = 8 and change the program so that it works for any size, outputting a grid
+                of the given width and height.
+            </p>
+        </div>
+        <div>
+            <h1>Ch3: Functions</h1>
+            <h2>Minimum</h2>
+            <p>
+                The previous chapter introduced the standard function Math.min that returns
+                its smallest argument. We can build something like that now. Write a function
+                min that takes two arguments and returns their minimum.
 
-        </p>
-        <h2>Recursion</h2>
-        <p>
-            We’ve seen that % (the remainder operator) can be used to test whether a
-            number is even or odd by using % 2 to see whether it’s divisible by two. Here’s
-            another way to define whether a positive whole number is even or odd:
-        </p>
-        <ul>
-            <li>Zero is even.</li>
-            <li>One is odd.</li>
-            <li>For any other number N, its evenness is the same as N - 2.</li>
-        </ul>
-        <p>
-            Define a recursive function isEven corresponding to this description. The
-            function should accept a single parameter (a positive, whole number) and return
-            a Boolean.
-            Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a
-            way to fix this?
+            </p>
+            <h2>Recursion</h2>
+            <p>
+                We’ve seen that % (the remainder operator) can be used to test whether a
+                number is even or odd by using % 2 to see whether it’s divisible by two. Here’s
+                another way to define whether a positive whole number is even or odd:
+            </p>
+            <ul>
+                <li>Zero is even.</li>
+                <li>One is odd.</li>
+                <li>For any other number N, its evenness is the same as N - 2.</li>
+            </ul>
+            <p>
+                Define a recursive function isEven corresponding to this description. The
+                function should accept a single parameter (a positive, whole number) and return
+                a Boolean.
+                Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a
+                way to fix this?
 
-        </p>
-        <h2>Bean Counting</h2>
-        <p>
-            You can get the Nth character, or letter, from a string by writing "string"[N].
-            The returned value will be a string containing only one character (for example,
-            "b"). The first character has position 0, which causes the last one to be found at
-            position string.length - 1. In other words, a two-character string has length
-            2, and its characters have positions 0 and 1.
-        </p>
-        <p>
-            Write a function countBs that takes a string as its only argument and returns
-            a number that indicates how many uppercase “B” characters there are in the
-            string. 
-        </p>
-        <p>
-            Next, write a function called countChar that behaves like countBs, except
-            it takes a second argument that indicates the character that is to be counted
-            (rather than counting only uppercase “B” characters). Rewrite countBs to
-            make use of this new function.
-        </p>
-        <h1>Ch4: Data Structures: Objects and Arrays</h1>
-        <h2>The Sum of a Range</h2>
-        <p>
-            The introduction of this book alluded to the following as a nice way to compute
-            the sum of a range of numbers: <br><br> console.log(sum(range(1, 10)));
-        </p>
-        <p>
-            Write a range function that takes two arguments, start and end, and returns
-            an array containing all the numbers from start up to (and including) end.
-        </p>
-        <p>
-            Next, write a sum function that takes an array of numbers and returns the
-            sum of these numbers. Run the example program and see whether it does
-            indeed return 55.
-        </p>
-        <p>
-            As a bonus assignment, modify your range function to take an optional third
-            argument that indicates the “step” value used when building the array. If no
-            step is given, the elements go up by increments of one, corresponding to the
-            old behavior. The function call range(1, 10, 2) should return [1, 3, 5, 7,
-            9]. Make sure it also works with negative step values so that range(5, 2, -1)
-            produces [5, 4, 3, 2].
-        </p>
-        <h2>Reversing an Array</h2>
-        <p>
-            Arrays have a reverse method that changes the array by inverting the order in
-            which its elements appear. For this exercise, write two functions, reverseArray
-            and reverseArrayInPlace. The first, reverseArray, takes an array as argument
-            and produces a new array that has the same elements in the inverse order. The
-            second, reverseArrayInPlace, does what the reverse method does: it modifies
-            the array given as argument by reversing its elements. Neither may use the
-            standard reverse method.
-        </p>
-        <p>
-            Thinking back to the notes about side effects and pure functions in the
-            previous chapter, which variant do you expect to be useful in more situations?
-            Which one runs faster?
-        </p>
-        <h2>A List</h2>
-        <p>
-            Objects, as generic blobs of values, can be used to build all sorts of data structures.
-            A common data structure is the list (not to be confused with array). A list is a nested
-            set of objects, with the first object holding a reference to the second, the second to
-            the third, and so on.
-        </p>
-        <p>
-            <pre>
-                let list = {
-                    value: 1,
-                    rest: {
-                        value: 2,
+            </p>
+            <h2>Bean Counting</h2>
+            <p>
+                You can get the Nth character, or letter, from a string by writing "string"[N].
+                The returned value will be a string containing only one character (for example,
+                "b"). The first character has position 0, which causes the last one to be found at
+                position string.length - 1. In other words, a two-character string has length
+                2, and its characters have positions 0 and 1.
+            </p>
+            <p>
+                Write a function countBs that takes a string as its only argument and returns
+                a number that indicates how many uppercase “B” characters there are in the
+                string. 
+            </p>
+            <p>
+                Next, write a function called countChar that behaves like countBs, except
+                it takes a second argument that indicates the character that is to be counted
+                (rather than counting only uppercase “B” characters). Rewrite countBs to
+                make use of this new function.
+            </p>
+        </div>
+        <div>
+            <h1>Ch4: Data Structures: Objects and Arrays</h1>
+            <h2>The Sum of a Range</h2>
+            <p>
+                The introduction of this book alluded to the following as a nice way to compute
+                the sum of a range of numbers: <br><br> console.log(sum(range(1, 10)));
+            </p>
+            <p>
+                Write a range function that takes two arguments, start and end, and returns
+                an array containing all the numbers from start up to (and including) end.
+            </p>
+            <p>
+                Next, write a sum function that takes an array of numbers and returns the
+                sum of these numbers. Run the example program and see whether it does
+                indeed return 55.
+            </p>
+            <p>
+                As a bonus assignment, modify your range function to take an optional third
+                argument that indicates the “step” value used when building the array. If no
+                step is given, the elements go up by increments of one, corresponding to the
+                old behavior. The function call range(1, 10, 2) should return [1, 3, 5, 7,
+                9]. Make sure it also works with negative step values so that range(5, 2, -1)
+                produces [5, 4, 3, 2].
+            </p>
+            <h2>Reversing an Array</h2>
+            <p>
+                Arrays have a reverse method that changes the array by inverting the order in
+                which its elements appear. For this exercise, write two functions, reverseArray
+                and reverseArrayInPlace. The first, reverseArray, takes an array as argument
+                and produces a new array that has the same elements in the inverse order. The
+                second, reverseArrayInPlace, does what the reverse method does: it modifies
+                the array given as argument by reversing its elements. Neither may use the
+                standard reverse method.
+            </p>
+            <p>
+                Thinking back to the notes about side effects and pure functions in the
+                previous chapter, which variant do you expect to be useful in more situations?
+                Which one runs faster?
+            </p>
+            <h2>A List</h2>
+            <p>
+                Objects, as generic blobs of values, can be used to build all sorts of data structures.
+                A common data structure is the list (not to be confused with array). A list is a nested
+                set of objects, with the first object holding a reference to the second, the second to
+                the third, and so on.
+            </p>
+            <p>
+                <pre>
+                    let list = {
+                        value: 1,
                         rest: {
-                            value: 3,
-                            rest: null
+                            value: 2,
+                            rest: {
+                                value: 3,
+                                rest: null
+                            }
                         }
-                    }
-                };                    
-            </pre>
-        </p>
-        <p>
-            A nice thing about lists is that they can share parts of their structure. For
-            example, if I create two new values {value: 0, rest: list} and {value: -1,
-            rest: list} (with list referring to the binding defined earlier), they are both
-            independent lists, but they share the structure that makes up their last three
-            elements. The original list is also still a valid three-element list.
-        </p>
-        <p>
-            Write a function arrayToList that builds up a list structure like the one
-            shown when given [1, 2, 3] as argument. Also write a listToArray function
-            that produces an array from a list. Then add a helper function prepend, which
-            takes an element and a list and creates a new list that adds the element to the
-            front of the input list, and nth, which takes a list and a number and returns
-            the element at the given position in the list (with zero referring to the first
-            element) or undefined when there is no such element.
-        </p>
-        <p>
-            If you haven’t already, also write a recursive version of nth.
-        </p>
-        <h2>Deep Comparison</h2>
-        <p>
-            The == operator compares objects by identity. But sometimes you’d prefer to
-            compare the values of their actual properties.
-        </p>
-        <p>
-            Write a function deepEqual that takes two values and returns true only if they
-            are the same value or are objects with the same properties, where the values
-            of the properties are equal when compared with a recursive call to deepEqual.
-        </p>
-        <p>
-            To find out whether values should be compared directly (use the === operator
-            for that) or have their properties compared, you can use the typeof operator.
-            If it produces "object" for both values, you should do a deep comparison.
-            But you have to take one silly exception into account: because of a historical
-            accident, typeof null also produces "object".
-        </p>
-        <p>
-            The Object.keys function will be useful when you need to go over the properties of
-            objects to compare them.
-        </p>
+                    };                    
+                </pre>
+            </p>
+            <p>
+                A nice thing about lists is that they can share parts of their structure. For
+                example, if I create two new values {value: 0, rest: list} and {value: -1,
+                rest: list} (with list referring to the binding defined earlier), they are both
+                independent lists, but they share the structure that makes up their last three
+                elements. The original list is also still a valid three-element list.
+            </p>
+            <p>
+                Write a function arrayToList that builds up a list structure like the one
+                shown when given [1, 2, 3] as argument. Also write a listToArray function
+                that produces an array from a list. Then add a helper function prepend, which
+                takes an element and a list and creates a new list that adds the element to the
+                front of the input list, and nth, which takes a list and a number and returns
+                the element at the given position in the list (with zero referring to the first
+                element) or undefined when there is no such element.
+            </p>
+            <p>
+                If you haven’t already, also write a recursive version of nth.
+            </p>
+            <h2>Deep Comparison</h2>
+            <p>
+                The == operator compares objects by identity. But sometimes you’d prefer to
+                compare the values of their actual properties.
+            </p>
+            <p>
+                Write a function deepEqual that takes two values and returns true only if they
+                are the same value or are objects with the same properties, where the values
+                of the properties are equal when compared with a recursive call to deepEqual.
+            </p>
+            <p>
+                To find out whether values should be compared directly (use the === operator
+                for that) or have their properties compared, you can use the typeof operator.
+                If it produces "object" for both values, you should do a deep comparison.
+                But you have to take one silly exception into account: because of a historical
+                accident, typeof null also produces "object".
+            </p>
+            <p>
+                The Object.keys function will be useful when you need to go over the properties of
+                objects to compare them.
+            </p>
+        </div>
     </main>
     <footer>
         <p>

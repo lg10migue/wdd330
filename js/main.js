@@ -76,6 +76,31 @@ const links = [
             }
         ]
     },
+    {
+        label : "Week 4",
+        contents : [
+            {
+                label : "Notes",
+                url : "week4/notes.html"
+            },
+            {
+                label : "Ch8: Quiz Ninja",
+                url : "week4/ch8_quiz_ninja.html"
+            },
+            {
+                label : "Ch12: Quiz Ninja",
+                url : "week4/ch12_quiz_ninja.html"
+            },
+            // {
+            //     label : "Exercises",
+            //     url : "week4/exercises.html"
+            // },
+            {
+                label : "Team Activity: Tic Tac Toe",
+                url : "week4/team_activity.html"
+            }
+        ]
+    }
 ] ;
 
 createTableOfContents( links ) ;

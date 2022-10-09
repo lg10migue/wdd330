@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        .error {
+            background: #f99 ;
+            border: #900 1px solid ;
+            display: none ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch8: Forms.</h1>
+            <h2>Forms</h2>
+            <p>
+                Forms are the primary method used for entering data into a browser.
+            </p>
+            <h2>A Searching Example</h2>
+            <section>
+                <form name='search' action='/search'>
+                    <input name='searchInput' placeholder="Search Here">
+                    <button type='submit'>Search</button>
+                </form>
+            </section>
+            <h2>Accesing Form Elements</h2>
+            <p>
+                <b>document.forms</b> will return an HTML collection of all the forms on a page.
+            </p>
+            <p>
+                <b>form.elements</b> will return an HTML collection of all the elements contained within a form.
+            </p>
+            <h2>Form Events</h2>
+            <p>
+                Forms have <b>focus</b>, <b>blur</b>, and <b>change</b> events that fire as a user interacts
+                with the form.
+            </p>
+            <h2>Submitting a Form</h2>
+            <p>
+                Forms also have a <b>submit</b> event that can be used to intercept a form before it's been submitted.
+            </p>
+            <h2>Retrieving and Changing Values From a Form</h2>
+            <p>
+                The information entered into a form can be read or updated using the <b>value</b> property
+                of the form controls.
+            </p>
+            <h2>Form Controls</h2>
+            <p>
+                Forms have a variety of controls that are used for entering different types of information.
+            </p>
+            <p>
+                Some common types of form control are:
+            </p>
+            <ul>
+                <li><b>input</b> fields, including text, passwords, check boxes, radio buttons, and file uploads.</li>
+                <li><b>select</b> menus for drop-down lists of options.</li>
+                <li><b>textarea</b> elements for longer text entry.</li>
+                <li><b>button</b> elements for submitting and resetting forms.</li>
+            </ul>
+            <h2>Input Fields</h2>
+            <p>
+                HTML5 has a large number of new input types that are beginning to be implemented in modern browsers.
+            </p>
+            <h2>Hero Form</h2>
+            <section>
+                <form id='heroForm'>
+                    <label for='heroName'>Name:
+                        <input type='text' id='heroName' name='heroName' placeholder='Your Super Hero Name' maxlength=32 required>
+                    </label>
+                    <label for='realName'>Real Name:
+                        <input type='password' name='realName' id='realName'>
+                    </label>
+                    <p>Super Powers:</p>
+                    <label for='flight'>Flight:
+                        <input type='checkbox' id='flight' value='Flight' name='powers'>
+                    </label>
+                    <label for='strength'>Super Strength:
+                        <input type='checkbox' id='strength' value='Strength' name='powers'>
+                    </label>
+                    <label for='speed'>Super Speed:
+                        <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+                    </label>
+                    <label for='energy'>Energy Blasts:
+                        <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+                        </label>
+                    <label for='telekinesis'>Telekinesis:
+                        <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+                    </label>
+                    <p>What type of hero are you?</p>
+                    <label for='hero'>Hero:
+                        <input type='radio' name='category' value='Hero' id='hero'>
+                    </label>
+                    <label for='villain'>Villain:
+                        <input type='radio' name='category' value='Villain' id='villain'>
+                    </label>
+                    <label for='anti-hero'>Anti-Hero:
+                        <input type='radio' name='category' value='Antihero' id='anti-hero'>
+                    </label>
+                    <label for='age'>Age:
+                        <input type='number' id='age' name='age' min=0 step=1>
+                    </label>
+                    <label for='City'>Base of Operations:
+                        <select name='city' id='city'>
+                            <option value='' selected>Choose a City</option>
+                            <option value='Metropolis'>Metropolis</option>
+                            <option value='Gotham City'>Gotham City</option>
+                            <option value='Keystone City'>Keystone City</option>
+                            <option value='Coast City'>Coast City</option>
+                            <option value='Star City'>Star City</option>
+                        </select>
+                    </label>
+                    <label for='origin'>Origin Story:
+                        <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
+                    </label>
+                    <button type='reset'>Reset</button>
+                    <button type='submit' id="submit" disabled>Submit</button>
+                </form>
+            </section>
+            <h2>Form Validation</h2>
+            <p>
+                The HTML5 form validation API can be used to automatically validate a form, but only at a
+                basic level, so a custom validation script may be required.
+            </p>
+        </div>
+        <div>
+            <h1>Ch12: Object Oriented Programming.</h1>
+            <h2>Object-Oriented Programming</h2>
+            <p>
+                Object-oriented programming (OOP) is a way of programming that uses objects that
+                encapsulate their own properties and methods.
+            </p>
+            <p>
+                The main concepts of OOP are encapsulation, polymorphism and inheritance.
+            </p>
+            <h2>Encapsulation</h2>
+            <p>
+                The inner workings are kept hidden inside the object and only the essential
+                functionalities are exposed to the end user.
+            </p>
+            <p>
+                Keep all the programming logic inside an object and making methods available
+                to implement the functionality, without the outside world needing to know how it's done.
+            </p>
+            <h2>Polymorphism</h2>
+            <p>
+                The same process can be used for different objects.
+            </p>
+            <p>
+                Various objects can share the same method, but also have the ability
+                to override shared methods with a more specific implementation.
+            </p>
+            <p>
+                Polymorphism allows objects to override shared methods with a more specific implementation.
+            </p>
+            <h2>Inheritance</h2>
+            <p>
+                Taking the features of one object then adding some new features.
+            </p>
+            <p>
+                Take an object that already exists and inherit all its properties
+                and methods. We can then improve on its functionality by adding new properties and methods.
+            </p>
+            <h2>Classes</h2>
+            <p>
+                ES6 introduced class declarations that use the <b>class</b> keyword.
+                These can be used in place of constructor functions.
+            </p>
+            <h2>Constructor Functions</h2>
+            <p>
+                Constructor functions can be used to create instances of objects.
+            </p>
+            <p>
+                Inside a constructor function or class declaration, the keyword <b>this</b> refers to
+                the object returned by the function.
+            </p>
+            <h2>Prototypal Inheritance</h2>
+            <p>
+                All instances of a class or constructor function inherit all the
+                properties and methods of its prototype.
+            </p>
+            <h2>Finding Out the Prototype</h2>
+            <p>
+                The prototype chain is used to find an available method. If an object
+                lacks a method, JavaScript will check whether its prototype has the method.
+                If not, it will check that function's prototype until it finds the
+                method or reaches the <b>Object</b> constructor function.
+            </p>
+            <h2>The Prototype Is Live!</h2>
+            <p>
+                The prototype is live, so new properties and methods can be added to
+                existing instances.
+            </p>
+            <h2>Public and Private Methods</h2>
+            <p>
+                Private properties and methods can be created by defining variables using <b>const</b>
+                and defining a function inside a constructor function. These can be made public
+                using getter and setter functions.
+            </p>
+            <h2>Adding Methods to Built-in Objects</h2>
+            <p>
+                Monkey-patching is the process of adding methods to built-in objects by
+                augmenting their prototypes. This should be done with caution as it can cause
+                unexpected behavior in the way built-in objects work.
+            </p>
+            <h2>Mixins</h2>
+            <p>
+                A mixin method can be used to add properties and methods from other objects
+                without creating an inheritance chain.
+            </p>
+            <h2>Chaining Functions</h2>
+            <p>
+                Methods can be chained together and called in sequence if they return a reference to <b>this</b>.
+            </p>
+            <h2>Binding this, Use that = this and, bind(this)</h2>
+            <p>
+                The value of <b>this</b> is not retained inside nested functions, which can cause errors.
+                This can be worked around by using <b>that = this</b>, using the <b>bind(this)</b> method
+                and using arrow functions.
+            </p>
+            <h2>Borrowing Methods from Prototypes</h2>
+            <p>
+                Methods can be borrowed from other objects.
+            </p>
+            <h2>Composition Over Inheritance</h2>
+            <p>
+                Composition over inheritance is a design pattern where objects are composed from 'building-block'
+                objects, rather than inheriting all their properties and methods from a parent class.
+            </p>
+        </div>
+        <!-- <div>
+            <h1>Ch15: Modern Javascript</h1>
+        </div> -->
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/ch8.js"></script>
+    <script src="js/ch12.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Header */
+
+header {
+    text-align: center ;
+	background-color: rgb( 255, 240, 37 ) ;
+}
+
+/* Body */
+body {
+    text-align: center ;
+}
+
+
+table {
+    width: 400px ;
+    height: 400px ;
+    margin: 0 auto ;
+}
+
+/* Stretch Goal 1 */
+
+table td, table tr {
+    width: 35% ;
+    height: 35% ;
+}
+
+table td {
+    border-right: 1px solid ;
+    border-bottom: 1px solid ;
+    font-size: 5em ;
+    text-align: center ;
+}
+
+table td:last-child {
+    border-right: 0 ;
+}
+
+table tr:last-child td {
+    border-bottom: 0 ;
+}
