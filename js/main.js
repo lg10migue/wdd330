@@ -91,10 +91,10 @@ const links = [
                 label : "Ch12: Quiz Ninja",
                 url : "week4/ch12_quiz_ninja.html"
             },
-            // {
-            //     label : "Exercises",
-            //     url : "week4/exercises.html"
-            // },
+            {
+                label : "Exercises",
+                url : "week4/exercises.html"
+            },
             {
                 label : "Team Activity: Tic Tac Toe",
                 url : "week4/team_activity.html"

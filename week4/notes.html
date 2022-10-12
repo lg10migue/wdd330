@@ -264,9 +264,113 @@
                 objects, rather than inheriting all their properties and methods from a parent class.
             </p>
         </div>
-        <!-- <div>
+        <div>
             <h1>Ch15: Modern Javascript</h1>
-        </div> -->
+            <h2>Libraries</h2>
+            <p>
+                JavaScript libraries provide methods to make common tasks easier to achieve.
+            </p>
+            <p>
+                Libraries can make programming much easier, but you should think carefully about
+                whether you require a library, and which one is best for your needs.
+            </p>
+            <h2>jQuery & Lodash</h2>
+            <p>
+                jQuery and Lodash are two popular libraries that provide a large number of
+                useful and well-tested functions.
+            </p>
+            <h2>Modular JavaScript</h2>
+            <p>
+                A module is a self-contained piece of code that provides functions and
+                methods that can then be used in other files and by other modules.
+            </p>
+            <h2>ES6 Modules</h2>
+            <p>
+                ES6 added support for modules, allowing code to be abstracted into their
+                own self-contained files and imported into another file.
+            </p>
+            <h2>MVC Frameworks</h2>
+            <p>
+                The MVC pattern is used to organize code into distinct sections that are
+                responsible for different elements of an application.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <b>Models</b> are objects that implement the functionality for creating, reading,
+                        updating and deleting (known as CRUD tasks) specific pieces of information
+                        about the application, as well as any other associated logic and behavior.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Views</b> provide a visual representation of the model showing all the relevant
+                        information. In a web application, this would be the HTML displayed on a
+                        web page. Views also provide a way for users to interact with an application,
+                        usually via forms.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Controllers</b> link models and views together by communicating between them.
+                        They respond to events, which are usually inputs from a user (entering some
+                        data into a form, for example), process the information, then update the
+                        model and view accordingly.
+                    </p>
+                </li>
+            </ul>
+            <h2>A Quick List Example</h2>
+            <section>
+                <form id="input">
+                    <label for='name'>Name:</label>
+                    <input type='text' name='name' required >
+                    <button type='submit'>Submit</button>
+                </form>
+                <ul id='list'></ul>
+            </section>
+            <h2>Templates</h2>
+            <p>
+                Template files can be used to separate view code from JavaScript; they
+                also enable dynamic code and programming logic to be used to generate markup.
+            </p>
+            <h2>Web Components</h2>
+            <p>
+                The W3C are working on developing a standard called Web Components that attempts
+                to extend HTML and introduce new features such as templates, custom tags, the
+                ability to import HTML partials, and a shadow DOM. The idea is to use it to develop
+                modular and self-contained components that can be reused in different applications.
+            </p>
+            <h2>View Libraries</h2>
+            <p>
+                React and Vue.js are popular JavaScript view libraries that render components
+                and keep track of their state.
+            </p>
+            <h2>Package Managers</h2>
+            <p>
+                npm and Yarn are package managers that can be used to install JavaScript
+                packages, as well as any dependencies that they require.
+            </p>
+            <h2>Deploying JavaScript</h2>
+            <p>
+                Before code is deployed, it should be concatenated into a single file, minified
+                and compressed. The script tag should be placed just before the closing &lt/body&gt
+                tag to ensure that all elements on the page have loaded before the script runs.
+            </p>
+            <h2>Minification</h2>
+            <p>
+                Minification is the process of removing any redundant characters from the code
+                in order to reduce its file size.
+            </p>
+            <p>
+                Files can be compressed on the server using the gzip compression tool.
+            </p>
+            <h2>Webpack</h2>
+            <p>
+                Webpack can be used to bundle multiple files into a single bundle, and
+                automate common tasks such as transpiling, minifying code and running tests.
+            </p>
+            
+        </div>
     </main>
     <footer>
         <p>
@@ -275,5 +379,6 @@
     </footer>
     <script src="js/ch8.js"></script>
     <script src="js/ch12.js"></script>
+    <script src="js/ch15.js"></script>
 </body>
 </html>
