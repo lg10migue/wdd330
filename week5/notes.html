@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch10: Testing and Debugging.</h1>
+            <h2>Errors, Exceptions, and Warnings</h2>
+            <p>
+                <b>Bugs</b> are unavoidable in code, and it's best to find them early rather than later.
+            </p>
+            <p>
+                <b>Errors</b> are caused when something goes wrong in a program. They are usually caused
+                by one of the following:
+            </p>
+            <ul>
+                <li>
+                    System error ― there's a problem with the system or external devices with which
+                    the program is interacting.
+                </li>
+                <li>
+                    Programmer error ― the program contains incorrect syntax or faulty logic; it
+                    could even be as simple as a typo.
+                </li>
+                <li>
+                    User error ― the user has entered data incorrectly, which the program is
+                    unable to handle.
+                </li>
+            </ul>
+            <p>
+                An <b>exception</b> is an error that produces a return value that can then be used by
+                the program to deal with the error.
+            </p>
+            <p>
+                A <b>warning</b> can occur if there's an error in the code that isn't enough to cause
+                the program to crash. This means the program will continue to run after a warning.
+            </p>
+            <h2>Strict Mode</h2>
+            <p>
+                JavaScript can be put into strict mode using the string <b>"use strict"</b>. This can
+                be used in a whole file or just a single function.
+            </p>
+            <h2>Linting Tools</h2>
+            <p>
+                Linting tools can be used to ensure your code follows good practice and conventions.
+            </p>
+            <h2>Feature Detection</h2>
+            <p>
+                Feature detection can check whether a method is supported before calling it,
+                helping to avoid an exception being thrown.
+            </p>
+            <h2>Debugging in the Browser</h2>
+            <p>
+                Debugging is the process of finding out where bugs occur in the code and
+                then dealing with them.
+            </p>
+            <p>
+                The console and browser's built-in debugging tool can be used to interactively
+                find and fix bugs in code.
+            </p>
+            <h2>Error Objects</h2>
+            <p>
+                An error object is created when an exception occurs.
+            </p>
+            <h2>Throwing Exceptions</h2>
+            <p>
+                Exceptions can be thrown using the <b>throw</b> statement.
+            </p>
+            <h2>Exception Handling</h2>
+            <p>
+                Any code placed inside a <b>try</b> block will pass any error objects to a <b>catch</b>
+                block when an exception occurs. Any code inside a <b>finally</b> block will run
+                if an exception does or does not occur.
+            </p>
+            <h2>Tests</h2>
+            <p>
+                Testing is an important part of programming that can often be overlooked. Writing good
+                tests means your code will be less brittle as it develops, and any errors will be identified early on.
+            </p>
+            <h2>Test-driven Development</h2>
+            <p>
+                Test-driven development is the practice of writing tests that fail, then writing
+                the code that passes the test, then refactoring the code every time a new
+                feature is implemented.
+            </p>
+            <h2>Jest</h2>
+            <p>
+                The Jest framework can be used to test code.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/ch10.js"></script>
+</body>
+</html>

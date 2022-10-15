@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Exercises</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercises</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch8: Bugs and Errors</h1>
+            <h2>Retry</h2>
+            <p>
+                Say you have a function primitiveMultiply that in 20 percent of cases
+                multiplies two numbers and in the other 80 percent of cases raises an
+                exception of type MultiplicatorUnitFailure. Write a function that wraps
+                this clunky function and just keeps trying until a call succeeds, after
+                which it returns the result.
+            </p>
+            <p>
+                Make sure you handle only the exceptions you are trying to handle.
+            </p>
+            <h2>The Locked Box</h2>
+            <p>
+                <pre>
+                    const box = {
+                        locked: true,
+                        unlock() { this.locked = false; },
+                        lock() { this.locked = true; },
+                        _content: [],
+                        get content() {
+                            if (this.locked) throw new Error("Locked!");
+                            return this._content;
+                        }
+                    };
+                </pre>
+            </p>
+            <p>
+                It is a box with a lock. There is an array in the box, but you can get at it only
+                when the box is unlocked. Directly accessing the private _content property is
+                forbidden.
+            </p>
+            <p>
+                Write a function called withBoxUnlocked that takes a function value as argument,
+                unlocks the box, runs the function, and then ensures that the box is locked again
+                before returning, regardless of whether the argument function returned normally
+                or threw an exception.
+            </p>
+            <p>
+                For extra points, make sure that if you call withBoxUnlocked when the box
+                is already unlocked, the box stays unlocked.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/exercises.js"></script>
+</body>
+</html>

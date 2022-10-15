@@ -100,6 +100,27 @@ const links = [
                 url : "week4/team_activity.html"
             }
         ]
+    },
+    {
+        label : "Week 5",
+        contents : [
+            {
+                label : "Notes",
+                url : "week5/notes.html"
+            },
+            {
+                label : "Exercises",
+                url : "week5/exercises.html"
+            },
+            {
+                label : "Team Activity: Hikes",
+                url : "week5/team_activity.html"
+            },
+            {
+                label : "Team Activity: Hikes (MVC)",
+                url : "week5/team_activity_mvc.html"
+            }
+        ]
     }
 ] ;
 

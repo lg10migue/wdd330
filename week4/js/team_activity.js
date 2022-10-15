@@ -12,7 +12,7 @@ function makeMove( e ) {
         if ( ! checkWinner() ) {
             if ( player === player1 ) player = player2 ;
             else player = player1 ;
-            divDisplay.innerHTML = `${ player.label } turns!`
+            divDisplay.innerHTML = `${ player.label } turns!` ;
         } ;
     } ;
 } ;
@@ -28,6 +28,8 @@ resetButton.addEventListener( "click", function() {
         } ;
     } ;
     board.addEventListener( "click", makeMove ) ;
+    divDisplay.style.backgroundColor = "rgb( 255, 240, 37 )" ;
+    divDisplay.innerHTML = `${ player.label } turns!` ;
 } ) ;
 
 // Stretch Goal 2 & 3.
@@ -55,6 +57,7 @@ function checkWinner() {
     } ;
     if ( ! flag ) {
         divDisplay.innerHTML = `TIED GAME!` ;
+        divDisplay.style.backgroundColor = "orange" ;
         return true
     } ;
 } ;
