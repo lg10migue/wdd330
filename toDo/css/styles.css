@@ -1,0 +1,114 @@
+/* HTML */
+
+html {
+    font-size: 18px ;
+}
+
+/* Main */
+
+main .container h1 {
+    text-align: center ;
+}
+
+main .container {
+    padding: .5em ;
+    background-color: #6785e7b2 ;
+    max-width: 500px ;
+    margin: 0 auto ;
+    border-radius: .2em ;
+    box-shadow: 15px 10px 25px rgba(8, 42, 156, 0.699) ;
+}
+
+button, #toDoList li > input {
+    cursor: pointer ;
+}
+
+/* To Do List */
+
+#toDoList {
+    list-style-type: none ;
+    font-size: 1.2em ;
+    width: 100% ;
+    padding: 0 ;
+    margin: 0 ;
+}
+
+/* To Do Items*/
+
+#toDoList li {
+    display: flex ;
+    align-items: center ;
+    justify-content: space-between ;
+    border:rgb(87, 109, 182) ;
+    border-style: solid solid none solid ;
+    border-width: 1px ;
+}
+
+#toDoList li > input, #toDoList li > button, #add-todo button {
+    width: 44px ;
+    height: 44px ;
+    font-size: 2em ;
+}
+
+#toDoList li > label {
+    flex: auto ;
+    margin-left: .5em ;
+}
+
+.delete {
+    background-color: #92abfd00 ;
+    border: none ;
+}
+
+.delete:hover {
+    color: red ;
+}
+
+/* To Do Footer*/
+
+.list-footer {
+    border: 1px solid rgb(87, 109, 182) ;
+    display: flex ;
+    align-items: center ;
+    justify-content: space-between ;
+    padding: .5em ;
+}
+
+.list-footer p {
+    margin: 0 0 0 1em ;
+}
+
+.list-footer div {
+    margin: 0 1em 0 0 ;
+}
+
+.footer-btn {
+    background-color: rgb(112, 135, 211) ;
+    height: 100% ;
+    border: none ;
+    padding: 1em ;
+}
+
+.footer-btn:hover {
+    border: 1px solid rgb(87, 109, 182) ;
+    opacity: .5 ;
+}
+
+.click {
+    border: 2px solid rgb(87, 109, 182) ;
+    background-color: rgb(99, 133, 243) ;
+}
+
+/* Add To Do */
+
+#add-todo {
+    display: flex ;
+    justify-content: space-between ;
+    margin-top: 1.5em ;
+    height: 44px ;
+}
+
+#add-todo label, #add-todo input {
+    width: 95% ;
+    height: 95% ;
+}
