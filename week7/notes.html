@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch11: Further Functions.</h1>
+            <h2>Function Properties and Methods</h2>
+            <p>
+                Functions have built-in properties such as <b>length</b>, but can have custom properties added.
+            </p>
+            <h2>Call and Apply Methods</h2>
+            <p>
+                All functions have <b>call()</b> and <b>apply()</b> methods that can invoke a function with
+                the value of <b>this</b> bound to an object that is provided as an argument.
+            </p>
+            <h2>Memoization</h2>
+            <p>
+                If a function takes some time to compute a return value, we can save the result in a <b>cache</b>
+                property. Then if the same argument is used again later, we can return the value from the
+                cache, rather than having to compute the result again.
+            </p>
+            <h2>Immediately Invoked Function Expressions</h2>
+            <p>
+                Immediately Invoked Function Expressions or IIFEs are functions that are enclosed in
+                parentheses and immediately followed by double parentheses so they're invoked.
+                They are useful for namespacing variables and setting default values.
+            </p>
+            <h2>Functions that Define and Rewrite Themselves</h2>
+            <p>
+                Functions are able to dynamically redefine themselves in the body of the function,
+                depending on certain conditions. If any properties have previously been set on
+                the function, these will be lost when the function redefines itself.
+            </p>
+            <h2>Recursive Functions</h2>
+            <p>
+                A recursive function will keep invoking itself until a certain condition is met.
+            </p>
+            <h2>Callbacks</h2>
+            <p>
+                A callback is a function that's provided as an argument to another function.
+            </p>
+            <p>
+                Callbacks are frequently used in asynchronous programming as part of the event loop.
+                This means that a program can continue to run in a single thread while waiting for
+                another task to be completed.
+            </p>
+            <h2>Promises</h2>
+            <p>
+                Promises can be used instead of callbacks to deal with multiple asynchronous actions
+                in sequence. They also provide a nicer mechanism for handling errors.
+            </p>
+            <h2>Functions That Return Functions</h2>
+            <p>
+                Functions that return other functions are known as higher-order functions.
+            </p>
+            <h2>Closures</h2>
+            <p>
+                A closure is the process of keeping a reference to a variable available outside the
+                scope of the function it was originally defined in.
+            </p>
+            <p>
+                Whenever a function is defined inside another function, the inner function
+                will have access to any variables that are declared in the outer function's scope.
+            </p>
+            <h2>Generators</h2>
+            <p>
+                A generator is created by placing an asterisk character (*) after the <b>function</b>keyword.
+            </p>
+            <p>
+                A generator function will return an iterator object that provides a <b>next()</b> method,
+                which returns the next value in a sequence that is defined in the generator function.
+            </p>
+            <h2>Functional Programming</h2>
+            <p>
+                Functional programming involves breaking processes down into steps that can be applied
+                as a series of functions.
+            </p>
+            <p>
+                Functional programming is a programming paradigm. Other examples of programming paradigms
+                include object oriented programming and procedural programming. JavaScript is a
+                multi-paradigm language, meaning that it can be used to program in a variety of
+                paradigms.
+            </p>
+            <h2>Pure Functions</h2>
+            <p>
+                Pure functions are functions that don't rely on the state of the code they are called
+                from, have no side-effects, and always give the same result when given the same
+                arguments (referential transparency).
+            </p>
+            <h2>Currying</h2>
+            <p>
+                Currying or partial application is the process of applying one argument at a time to a
+                function. A new function is returned until all the arguments have been used.
+            </p>
+        </div>
+        <div>
+            <h1>Ch13: AJAX.</h1>
+            <h2>AJAX</h2>
+            <p>
+                Ajax is a technique for sending and receiving data asynchronously in the background.
+            </p>
+            <p>
+                The data can be sent in many forms, but it is usually in JSON.
+            </p>
+            <p>
+                Ajax can be used for making partial page updates without having to do a full page reload.
+            </p>
+            <p>
+                Ajax can be used for communicating with external APIs.
+            </p>
+            <h2>The Fetch API</h2>
+            <p>
+                Ajax requests can be made using the Fetch API.
+            </p>
+            <h2>Response Interface</h2>
+            <p>
+                The Response interface allows you to control the response received from a request
+                or to create your own response objects.
+            </p>
+            <h2>Request Interface</h2>
+            <p>
+                The Request interface allows you to create a request object that contains
+                information about the request being made, such as the URL and headers.
+            </p>
+            <p>
+                Requests can retrieve data using a GET request, or send data using a POST request.
+            </p>
+            <h2>Headers Interface</h2>
+            <p>
+                The Headers interface allows you to create HTTP headers that can be added
+                to a request or response object.
+            </p>
+            <h2>FormData</h2>
+            <p>
+                The FormData interface makes it easier to send data from forms.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/ch11.js"></script>
+    <script src="js/ch13.js"></script>
+</body>
+</html>

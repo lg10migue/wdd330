@@ -130,6 +130,31 @@ const links = [
                 url : "toDo/index.html"
             }
         ]
+    },
+    {
+        label : "Week 7",
+        contents : [
+            {
+                label : "Notes",
+                url : "week7/notes.html"
+            },
+            {
+                label : "Ch11: Quiz Ninja",
+                url : "week7/ch11_quiz_ninja.html"
+            },
+            {
+                label : "Ch13: Quiz Ninja",
+                url : "week7/ch13_quiz_ninja.html"
+            },
+            {
+                label : "Exercises",
+                url : "week7/exercises.html"
+            },
+            {
+                label : "Team Activity: Hikes",
+                url : "week7/team_activity.html"
+            }
+        ]
     }
 ] ;
 
