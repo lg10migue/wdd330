@@ -1,0 +1,24 @@
+/* Chapter 12 */
+
+/* Main */
+
+.myCanvas {
+    border: dotted 2px black ;
+}
+
+#myCanvas6 {
+    margin: 0 20px ;
+}
+
+/* SVG */
+
+svg {
+    border: 1px solid ;
+    width: 30% ;
+}
+
+/* */
+
+.draganddrop .mc {
+    text-align: center ; 
+}

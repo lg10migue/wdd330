@@ -1,0 +1,89 @@
+/* Chapter 8 */
+
+/* Main */
+
+section {
+    text-align: center ;
+}
+
+/* Translation Example */
+
+#translation h1:hover span {
+    color: #484848 ;
+    transform: translateX( 40px ) ;
+}
+
+#translation h1 span, #scale h1 span, #rotation h1 span, #transition h1 span {
+    font-size: 30px ;
+    color: #999999 ;
+    display: inline-block ;
+}
+
+/* Scaling Example */
+
+#scale h1:hover span {
+    color: #484848 ;
+    transform: translateX( 40px ) scale( 1.5 ) ;
+}
+
+/* Rotation Example */
+
+#rotation h1:hover span {
+    color: #484848 ;
+    transform: rotate( 10deg ) translateX( 40px ) scale( 1.5 ) ;
+}
+
+/* Skew Example */
+
+#skew {
+    transform: skew( 15deg, 4deg ) ;
+}
+
+/* Transitions Example */
+
+#transition h1:hover span {
+    color: #484848 ;
+    -webkit-transition-property: -webkit-transform ;
+    transition-property: transform ;
+    transition-duration: 0.2s ;
+    transition-timing-function: ease-out ;
+    transition-delay: 50ms ;
+    /* Transition Shorthand */
+    /* transition: transform 0.2s ease-out 50ms ; */
+    transform: rotate( 10deg ) translateX( 40px ) scale( 1.5 ) ;
+}
+
+/* Animation Example */
+
+@keyframes bike {
+    0% {
+    background-position: 0 0 ;
+    }
+    100% {
+    background-position: -360px 0 ;
+    }
+}
+
+@keyframes move {
+    0% {
+    transform: translateX( -100px ) ;
+    }
+    100% {
+    transform: translateX( 100px ) ;
+    }
+}
+
+#animation:after {
+    content: "" ;
+    width: 90px ;
+    height: 92px ;
+    background-image: url( ../images/bike_sprite.png ) ;
+    display: block ;
+    margin: auto ;
+    animation: 0.4s steps( 4, end ) infinite 50ms bike, 8s linear infinite 50ms move ;
+    animation-play-state: paused ;
+}
+
+#animation:hover:after {
+    animation-play-state: running ;
+}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+    <link rel="stylesheet" href="css/ch8.css">
+    <link rel="stylesheet" href="css/ch12.css">
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch8: Transforms and Transitions.</h1>
+            <h2>Transforms</h2>
+            <p>
+                The CSS3 transform property lets you translate, rotate, scale, and/or skew
+                any element on the page.
+            </p>
+            <p>
+                We can manipulate an element's appearance using transform functions. The value
+                of the transform property is one or more transform functions (separated by
+                spaces) that will be applied in the order they're provided.
+            </p>
+            <h2>Translation</h2>
+            <p>
+                Translation functions allow you to move elements left, right, up, or down. When
+                you employ a translation function, you're moving elements without impacting the
+                flow of the document.
+            </p>
+            <p>
+                The <b>translate(x,y)</b> function moves an element <b>x</b> from the left, and <b>y</b> from the top.
+            </p>
+            <p>
+                If you only want to move an element vertically or horizontally,
+                you can use the <b>translatex</b> or <b>translatey</b> functions respectively.
+            </p>
+            <section id="translation">
+                <h1>Put<br>your<br><span>dukes</span><br>up,<br>sire</h1>
+            </section>
+            <h2>Scaling</h2>
+            <p>
+                The <b>scale(x,y)</b> function scales an element by the defined factors horizontally then
+                vertically. If only one value is provided, it will be used for both the <b>x</b> and <b>y</b>
+                values, growing or shrinking your element or pseudo-element while maintaining
+                the original aspect ratio.
+            </p>
+            <p>
+                As with <b>translate</b>, you can also use the <b>scaleX(x)</b> or <b>scaleY(y)</b> functions.
+                These functions will scale only the horizontal dimensions or only the vertical
+                dimensions respectively.
+            </p>
+            <p>
+                A scaled element will grow outwards from or shrink inwards towards its center; in other words, the
+                element's center will stay in the same place as its dimensions change.
+            </p>
+            <section id="scale">
+                <h1>Put<br>your<br><span>dukes</span><br>up,<br>sire</h1>
+            </section>
+            <h2>Rotation</h2>
+            <p>
+                The <b>rotate()</b> function rotates an element around the point of origin by a specified angle
+                value. As with <b>scale</b>, by default the point of origin is the element's center.
+                Generally, angles are declared in degrees, with positive degrees moving clockwise
+                and negative moving counterclockwise. In addition to degrees, values can be provided in
+                grads, radians, or turns,
+            </p>
+            <section id="rotation">
+                <h1>Put<br>your<br><span>dukes</span><br>up,<br>sire</h1>
+            </section>
+            <h2>Skew</h2>
+            <p>
+                The <b>skew(x,y)</b> function specifies a skew along the x and y axes. As you'd expect,
+                the <b>x</b> specifies the skew on the x axis, and the <b>y</b> specifies the skew on the y
+                axis. If the second parameter is omitted, the <b>skew</b> will only occur on the x axis
+            </p>
+            <p>
+                As with <b>translate</b> and <b>scale</b>, there are axis-specific versions of the <b>skew</b>
+                transform: <b>skewX()</b> and <b>skewY()</b>.
+            </p>
+            <section id="skew">
+                <h1>A Skewed Perspective</h1>
+            </section>
+            <h2>Changing the Origin of the Transform</h2>
+            <p>
+                You can control the origin from which your transforms are applied. This is done
+                using the <b>transform-origin</b> property. It defaults to the center of the
+                object (so that scales and rotations will be around the center of the box by default).
+            </p>
+            <h2>Transitions</h2>
+            <p>
+                Animation has certainly been possible for some time with JavaScript, but native CSS
+                transitions generally require less client-side processing, so they'll usually
+                appear smoother. On mobile devices with limited computing power, this can be a lifesaver.
+            </p>
+            <p>
+                Transitions allow the values of CSS properties to change over time, essentially
+                providing simple animations.
+            </p>
+            <p>
+                CSS transitions are declared along with the regular styles on an element. Whenever
+                the target properties change, the browser will apply the transition making the change
+                gradual. Often the change will be due to different styles applied to a hover state;
+                however, transitions will work equally well if the property in question is changed
+                by adding a class, or otherwise using JavaScript to change state. This is significant:
+                rather than writing out an animation in JavaScript, you can simply switch a property
+                value and rely on the browser to do all the heavy lifting.
+            </p>
+            <p>
+                If the browser lacks support for transitions, the change will be immediate instead
+                of gradual, which is fine and accessible.
+            </p>
+            <p>
+                Here are the steps to create a simple transition using only CSS:
+            </p>
+            <ul>
+                <li>Declare the original state of the element in the default style declaration.</li>
+                <li>Declare the final state of your transitioned element; for example, a :hover state.</li>
+                <li>
+                    Include the transition functions in your default style declaration using the
+                    transition properties, including: <b>transition-property</b>, <b>transition-duration</b>,
+                    <b>transition-timing-function</b>, and <b>transition-delay</b>.
+                </li>
+            </ul>
+            <h2>The transition-duration Property</h2>
+            <p>
+                The <b>transition-duration</b> property sets how long the transition will take:
+                the duration of time it takes to go from the default state to the transitioned state.
+                You can specify this either in seconds (<b>s</b>) or milliseconds (<b>ms</b>). 
+            </p>
+            <p>
+                200ms is generally considered the optimum time for a transition
+            </p>
+            <h2>The transition-timing-function Property</h2>
+            <p>
+                The <b>transition-timing-function</b> lets you control the pace of the transition in
+                even more granular detail. Do you want your animation to start off slow and become
+                faster, start off fast and end slower, advance at an even keel, or some other variation?
+            </p>
+            <p>
+                The most common timing functions include the key terms <b>ease</b>, <b>linear</b>,
+                <b>ease-in</b>, <b>ease-out</b>, or <b>ease-in-out</b>. The default <b>ease</b> has
+                a slow start, then it speeds up, and ends slowly. <b>ease-in-out</b> is similar to
+                <b>ease</b>, but accelerates more sharply at the beginning. <b>linear</b> creates
+                a transition that animates at a constant speed. <b>ease-in</b> creates a transition that
+                is slow to start but gains speed, then stops abruptly. The opposite, <b>ease-out</b>,
+                starts at full speed, then slows progressively as it reaches the conclusion
+                of the transition.
+            </p>
+            <p>
+                You can also describe your timing function more precisely by defining your own
+                <b>cubic-bezier</b> function. It accepts four numeric parameters; for example, linear
+                is the same as cubic-bezier(0, 0, 1, 1).
+            </p>
+            <h2>The transition-delay Property</h2>
+            <p>
+                By using the <b>transition-delay</b> property, it's possible to introduce a delay before
+                the transition begins. Normally a transition begins immediately, so the default is <b>0</b>.
+                Include the number of milliseconds (<b>ms</b>) or seconds (<b>s</b>) to delay the transition.
+            </p>
+            <section id="transition">
+                <h1>Put<br>your<br><span>dukes</span><br>up,<br>sire</h1>
+            </section>
+            <h2>Tip: Negative Delays</h2>
+            <p>
+                Interestingly, a negative time delay that's less than the duration of the entire transition
+                will cause it to start immediately, but it will start partway through the animation.
+                For example, if you have a delay of -500ms on a 2s transition, the transition will
+                start a quarter of the way through, and will last 1.5 seconds. On the way back, it
+                will jump 75% of the way through the transition, and then transition back to the
+                default state. This might be used to create some interesting effects, so it's worth
+                being aware of.
+            </p>
+            <h2>The transition Shorthand Property</h2>
+            <p>
+                The <b>transition</b> property is shorthand for the four transition properties just described.
+            </p>
+            <h2>Multiple Transitions</h2>
+            <p>
+                The <b>transition</b> properties allow for multiple transitions in one call.
+            </p>
+            <h2>Animations</h2>
+            <p>
+                CSS animations, allow you to control each step of an animation via keyframes.
+            </p>
+            <h2>Keyframes</h2>
+            <p>
+                A <b>keyframe</b> is a snapshot that defines a starting or end point of any smooth transition.
+            </p>
+            <p>
+                To create an animation, use the <b>@keyframes</b> rule for IE10+ and FF16+. Include
+                <b>@-webkit-keyframes</b> for all WebKit implementations followed by a name of your choosing,
+                which will serve as the identifier for the animation.
+            </p>
+            <p>
+                Each keyframe looks like its own nested CSS declaration block. Instead of a traditional
+                selector, though, you use a percentage value, or a comma-separated list of percentage
+                values. There are two keyterms― <b>from</b> and <b>to</b> ―which evaluate to 0% and 100% respectively.
+                These values specify how far along the animation each keyframe is located.
+            </p>
+            <p>
+                Inside each keyframe include the properties you want to animate, along with the animated
+                values. The values will be smoothly interpolated by the browser's animation
+                engine between each keyframe.
+            </p>
+            <p>
+                Keyframes can be specified in any order; it's the percentage values rather than the order
+                of the declarations that determine the sequence of keyframes in the animation.
+            </p>
+            <h2>Animation Properties</h2>
+            <p>
+                <b>animation-name</b> this property is used to attach an animation to an element.
+            </p>
+            <p>
+                The <b>animation-duration</b> property defines the length of time (in seconds or
+                milliseconds) an animation takes to complete one iteration (all the way through, from 0% to 100%).
+            </p>
+            <p>
+                The <b>animation-timing-function</b> determines how the animation will progress
+                over its duration.
+            </p>
+            <p>
+                The <b>animation-iteration-count</b> property lets you define how many times the
+                animation will play through. The value is generally an integer, but you can
+                also use numbers with decimal points , or the value <b>infinite</b> for endlessly
+                repeating animations. If omitted, it will default to <b>1</b>, in which case
+                the animation will occur only once.
+            </p>
+            <p>
+                The <b>animation-direction</b> property lets you change the behavior of the animation.
+            </p>
+            <p>
+                The <b>animation-delay</b> property is used to define how many milliseconds or
+                seconds to wait before the browser begins the animation
+            </p>
+            <p>
+                The <b>animation-fill-mode</b> property defines what happens before the
+                first animation iteration begins and after the last animation iteration
+                concludes. 
+            </p>
+            <p>
+                The <b>animation-play-state</b> property defines whether the animation
+                is running or paused.
+            </p>
+            <h2>The Shorthand animation Property</h2>
+            <p>
+                The <b>animation</b> property takes as its value a space-separated list of
+                values for the longhand <b>animation-name</b>, <b>animation-duration</b>,
+                <b>animation-timing-function</b>, <b>animation-delay</b>, <b>animation-iteration-count</b>,
+                <b>animation-direction</b>, <b>animation-fill-mode</b>, and
+                <b>animation-play-state properties</b>.
+            </p>
+            <section id="animation"></section>
+        </div>
+        <div>
+            <h1>Ch12: Canvas, SVG, and Drag and Drop.</h1>
+            <h2>Canvas</h2>
+            <p>
+                With canvas, we can draw shapes and lines, arcs and text, gradients
+                and patterns. In addition, canvas gives us the power to manipulate
+                pixels in images and even video.
+            </p>
+            <h2>Creating a canvas Element</h2>
+            <p>
+                The text in between the <b>canvas</b> tags will only be shown if the <b>canvas</b>
+                element is not supported by the visitor's browser.
+            </p>
+            <p>
+                The <b>canvas</b> element takes both a <b>width</b> and <b>height</b> attribute,
+                which must also be set.
+            </p>
+            <h2>Note: Why not set width and height using CSS?</h2>
+            <p>
+                You may be asking yourself, why not set the <b>width</b> and <b>height</b> via CSS? It's
+                because the width and height attributes determine how large the canvas's
+                coordinate system is. If we don't specify <b>width</b> and <b>height</b>, the <b>canvas</b>
+                element will default to a width of 300 and a height of 150. If we set
+                the width and height for a canvas only in CSS, the <b>canvas</b> element will be
+                300 by 150, and the CSS properties will simply determine how large the box
+                is that displays the image.
+            </p>
+            <h2>Drawing on the Canvas</h2>
+            <p>
+                All drawing on the canvas happens via the Canvas JavaScript API.
+            </p>
+            <h2>Getting the Context</h2>
+            <p>
+                Once we've stored our <b>canvas</b> element in a variable, we then set up
+                the canvas's <b>context</b>. The context is the place where your drawing
+                is rendered. Currently, there's only wide support for drawing
+                to a two-dimensional context.
+            </p>
+            <h2>Filling Our Brush with Color</h2>
+            <p>
+                The <b>strokeStyle</b> or <b>fillStyle</b> properties are set on a context
+                object, and both take one of three values: a string representing a color,
+                a <b>CanvasGradient</b> object, or a <b>CanvasPattern</b> object.
+            </p>
+            <p>
+                We can use any CSS color value to set the stroke or fill color, as
+                long as we specify it as a string: a hexadecimal value such as
+                <b>#00FFFF</b>, a color name such as <b>red</b> or <b>blue</b>, or an
+                RGB value such as <b>rgb(0, 0, 255)</b>. We can even use the property
+                <b>rgba</b> to set a semitransparent stroke or fill color.
+            </p>
+            <h2>Drawing a Rectangle to the Canvas</h2>
+            <p>
+                The <b>fillRect</b> and <b>strokeRect</b> methods take the X and Y
+                coordinates where you want to begin drawing the fill or the
+                stroke, and the width and height of the rectangle.
+            </p>
+            <h2>Note: The Canvas Coordinate System</h2>
+            <p>
+                The canvas coordinate system goes top-to-bottom and left-to-right.
+                The top-left corner is (0,0).
+            </p>
+            <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <h2>Variations on fillStyle</h2>
+            <p>
+                Instead of a color as our <b>fillStyle</b>, we could have used a
+                <b>CanvasGradient</b> or a <b>CanvasPattern</b> object.
+            </p>
+            <p>
+                We create a <b>CanvasPattern</b> by calling the <b>createPattern</b> method.
+                <b>createPattern</b> takes two parameters: the image to create the
+                pattern with, and how that image should be repeated. The repeat
+                value is a string, and the valid values are the same as those
+                in CSS: <b>repeat</b>, <b>repeat-x</b>, <b>repeat-y</b>, and <b>no-repeat</b>.
+            </p>
+            <canvas id="myCanvas2" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <p>
+                We can also create a <b>CanvasGradient</b> object to use as our <b>fillStyle</b>.
+                To create a <b>CanvasGradient</b>, we call one of two methods:
+                <b>createLinearGradient()</b> or <b>createRadialGradient()</b>; then we
+                add one or more color stops to the gradient.
+            </p>
+            <canvas id="myCanvas3" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <h2>Drawing Other Shapes by Creating Paths</h2>
+            <p>
+                <b>Paths</b> create a blueprint for your lines, arcs, and shapes,
+                but paths are invisible until you give them a stroke!
+            </p>
+            <p>
+                The first step is to begin the path of the circle. We do that
+                with the method <b>beginPath()</b>, which resets the default
+                path for you to begin drawing a new shape.
+            </p>
+            <p>
+                Now we need to create an arc. An <b>arc</b> is a segment of a circle.
+            </p>
+            <p>
+                The signature for the arc method is: <b>arc(x, y, radius, startAngle,
+                endAngle, anticlockwise)</b>.
+            </p>
+            <p>
+                <b>x</b> and <b>y</b> represent where on the canvas you want the
+                arc's path to begin. Imagine this as the center of the circle
+                that you'll be drawing. <b>radius</b> is, of course, the
+                distance from the center to the edge of the circle.
+            </p>
+            <p>
+                <b>startAngle</b> and <b>endAngle</b> represent the start and end angles
+                along the circle's circumference that you want to draw.
+                The units for the angles are in radians, and a circle is
+                2π radians. We want to draw a complete circle, so we'll
+                use 2π for the <b>endAngle</b>. In JavaScript, we can obtain
+                this value by multiplying <b>Math.PI</b> by 2.
+            </p>
+            <p>
+                <b>anticlockwise</b> is an optional argument. If you wanted the arc to be
+                drawn counterclockwise instead of clockwise, you would set this value
+                to <b>true</b>. 
+            </p>
+            <canvas id="myCanvas4" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <h2>Saving Canvas Drawings</h2>
+            <p>
+                If we create an image programmatically using the Canvas API,
+                but decide we'd like to have a local copy of our drawing,
+                we can use the API's <b>toDataURL</b> method to save our drawing.
+                <b>toDataURL</b> creates a URL with the image in it, (either a
+                png or jpg, whichever is specified). You can then
+                right-click the image at this URL, and save it as a PNG
+                or JPEG.
+            </p>
+            <h2>Drawing an Image to the Canvas</h2>
+            <p>
+                We can also draw images onto the canvas element. We can use
+                canvas's <b>drawImage</b> method to redraw the image from our
+                page into the canvas.
+            </p>
+            <h3>Demo 6: Drawing an image to the canvas</h3>
+            <canvas id="myCanvas6" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <img src="images/html5-logo.png" id="myImageElem">
+            <h2>Manipulating Images</h2>
+            <p>
+                We can use the <b>getImageData</b> method from the Canvas API
+                to manipulate the pixels of that image. <b>getImageData</b> will
+                return an <b>ImageData</b> object, which contains three
+                properties: <b>width</b>, <b>height</b>, and <b>data</b>.
+            </p>
+            <p>
+                <b>data</b> contains information about the pixels in the
+                <b>ImageData</b> object in the form of an array. Each pixel on
+                the <b>canvas</b> will have four values in the data array, which
+                correspond to that pixel's R, G, B, and A values. A stands for
+                Alpha, a measure of the element's transparency, with 0 meaning
+                the element is totally transparent, 1 meaning it's totally opaque,
+                and 0.5 meaning it's 50% transparent.
+            </p>
+            <h2>Converting an Image from Color to Black and White</h2>
+            <p>
+                Let's look at how we'd go about using <b>getImageData</b> to convert a full
+                color image into black and white on a canvas.
+            </p>
+            <p>
+                To put the image data we've modified back into the canvas we ca use a method
+                called <b>putImageData</b>.
+            </p>
+            <canvas id="myCanvas7" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <img src="images/html5-logo.png" id="myImageElem">
+            <h2>Manipulating Video with Canvas</h2>
+            <canvas id="myCanvas8" class="myCanvas" width="320" height="240">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <video src="video/ford-plane-takes-off.mp4" id="video" controls></video>
+            <h2>Note: Getting Better Performance</h2>
+            <p>
+                In the video conversion, we've created another variable, <b>pixelData</b>,
+                which stores the array of pixels in it. You may be wondering why we
+                bother doing this, instead of just accessing <b>imageData.data</b>. The reason
+                is performance. Creating the <b>pixelData</b> variable, which is then used several
+                times in the <b>for</b> loop, saves us several property lookups.
+            </p>
+            <h2>Displaying Text on the Canvas</h2>
+            <p>
+                Before we can draw any text to the now transparent canvas, we first must set
+                up the style of our text. We do that with the <b>fillStyle</b> and
+                <b>textAlign</b> methods.
+            </p>
+            <p>
+                The <b>font</b> property of the context object works the same way the CSS <b>font</b>
+                property does.
+            </p>
+            <p>
+                Finally, we draw the text. We use a method of the context object called <b>fillText</b>,
+                which takes the text to be drawn and the x,y coordinates where it should be placed.
+            </p>
+            <canvas id="myCanvas9" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn't support Canvas.
+            </canvas>
+            <h2>SVG</h2>
+            <p>
+                SVG stands for <b>Scalable Vector Graphics</b>, a specific file format that allows you to
+                describe vector graphics using XML. A major selling point of vector graphics in
+                general is that, unlike bitmap images (such as GIF, JPEG, PNG, and TIFF), vector
+                images preserve their quality even as you blow them up or shrink them down.
+            </p>
+            <p>
+                Images created with SVG are available via the DOM. 
+            </p>
+            <h2>Note: What's XML?</h2>
+            <p>
+                XML stands for eXtensible Markup Language. Like HTML, its a markup metalanguage.
+                It's a system meant to annotate text. Just as we can use HTML tags to wrap our
+                content and give it meaning, so can XML tags be used to describe data, such
+                as the content of a file.
+            </p>
+            <h2>Drawing in SVG</h2>
+            <p>
+                Drawing a circle in SVG is arguably easier than drawing a circle with canvas.
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+                <circle cx="50" cy="50" r="25" fill="red"/>
+            </svg>
+            <p>
+                The <b>viewBox</b> attribute defines the starting location, width, and
+                height of the SVG image.
+            </p>
+            <p>
+                The <b>circle</b> element defines a circle, with <b>cx</b> and <b>cy</b> the X
+                and Y coordinates of the center of the circle. The radius is represented
+                by <b>r</b>, while <b>fill</b> defines the fill style.
+            </p>
+            <p>
+                We can also draw rectangles in SVG, and add a stroke to them as we did with canvas.
+            </p>
+            <p>
+                This time, let's take advantage of SVG being an XML and utilize the &ltdesc&gt tag,
+                which allows us to provide a description for the image we're going to draw.
+            </p>
+            <p>
+                Next, we populate the &ltrect&gt tag with a number of attributes that describe the
+                rectangle. This includes the X and Y coordinate where the rectangle should
+                be drawn, the width and height of the rectangle, the fill, the stroke, and
+                the width of the stroke.
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+                <desc>Drawing a rectangle</desc>
+                <rect x="10" y="10" width="100" height="100" fill="blue" stroke="red" stroke-width="3"/>
+            </svg>
+            <h2>Canvas versus SVG</h2>
+            <p>
+                Canvas allows for pixel manipulation. One downside of canvas is that it operates in
+                what's known as <b>immediate mode</b>. This means that if you ever want to add more
+                to the canvas, you're unable to simply add to what's already there.
+            </p>
+            <p>
+                Canvas does allow you to save the images you create to a PNG or JPEG file.
+            </p>
+            <p>
+                There's also no access to what's drawn on the canvas via the DOM. Because of
+                this, canvas is much faster than SVG, and canvas is generally the better
+                choice if you're looking to design a game requiring lots of animations.
+            </p>
+            <p>
+                By contrast, what you draw to SVG is accessible via the DOM, because its
+                mode is <b>retained mode</b>, meaning that the structure of the image is
+                preserved in the XML document that describes it.
+            </p>
+            <p>
+                Since SVG is a file format you can't manipulate SVG images the way you
+                can manipulate pixels on canvas.
+            </p>
+            <p>
+                In summary, if you need to paint pixels to the screen and have no concerns
+                about the ability to retrieve and modify your shapes, canvas is probably
+                the better choice. If, on the other hand, you need to be able to access
+                and change specific aspects of your graphics, SVG might be more appropriate.
+            </p>
+            <h2>Drag and Drop</h2>
+            <p>
+                This API allows us to specify that certain elements are draggable, and then
+                specify what should happen when these draggable elements are dragged over or
+                dropped onto other elements on the page.
+            </p>
+            <p>
+                There are two major kinds of functionality you can implement with Drag and
+                Drop: dragging files from your computer into a web page—in combination with
+                the File API—or dragging elements into other elements on the same page.
+            </p>
+            <p>
+                There are several steps to adding drag and drop to your page:
+            </p>
+            <ul>
+                <li>
+                    1. Set the <b>draggable</b> attribute on any HTML elements you'd like
+                    to be draggable.
+                </li>
+                <li>
+                    2. Add an event listener for the <b>dragstart</b> event on any draggable
+                    HTML elements.
+                </li>
+                <li>
+                    3. Add an event listener for the <b>dragover</b> and <b>drop</b> events
+                    on any elements that you want to have accept dropped items.
+                </li>
+            </ul>
+            <h2>Feeding the WAI-ARIA Cat</h2>
+            <p>
+                In order to add a bit of fun and frivolity to our page, let's add a few
+                images of mice so that we can drag them onto our cat image and watch
+                the cat react and devour them.
+            </p>
+            <h2>Making Elements Draggable</h2>
+            <p>
+                The next step is to make our images draggable. In order to do that,
+                we add the draggable attribute to them, and set the value to true.
+            </p>
+            <h2>Important: draggable is not Boolean!</h2>
+            <p>
+                Note that <b>draggable</b> is not a Boolean attribute, so you have to explicitly set it
+                to <b>true</b>.
+            </p>
+            <h2>The DataTransfer Object</h2>
+            <p>
+                DataTransfer objects are one type of object outlined in the Drag and Drop API. These
+                objects allow us to set and get data about the elements that are being dragged.
+                Specifically, DataTransfer lets us define two pieces of information:
+            </p>
+            <ul>
+                <li>The type of data we're saving of the draggable element.</li>
+                <li>The value of the data itself.</li>
+            </ul>
+            <h2>Accepting Dropped Elements</h2>
+            <p>
+                By default, elements on the page aren't set up to receive dragged items.
+                In order to override the default behavior on a specific element, we must
+                stop it from happening. We can do that by creating two more event listeners.
+            </p>
+            <p>
+                The two events we need to monitor for are <b>dragover</b> and <b>drop</b>. As you'd
+                expect, <b>dragover</b> fires when you drag an item over an element, and <b>drop</b>
+                fires when you drop an item on it.
+            </p>
+            <section>
+                <h1>Wai-Aria? HAHA!</h1>
+                <h2 id="catHeading">Form Accessibility</h2>
+                <img src="images/cat.png" alt="WAI-ARIA Cat" id="cat">
+                <p id="mouseContainer" class="mc">
+                    <img src="images/computer-mouse-pic.svg" alt="mouse treat" id="mouse1" draggable="true">
+                    <img src="images/computer-mouse-pic.svg" alt="mouse treat" id="mouse2" draggable="true">
+                    <img src="images/computer-mouse-pic.svg" alt="mouse treat" id="mouse3" draggable="true">
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/ch12.js"></script>
+</body>
+</html>
