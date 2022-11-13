@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Animation */
+        section {
+            text-align: -webkit-center ;
+        }
+
+        #square, #square2 {
+            margin: 100px ;
+            width: 100px ;
+            height: 100px ;
+            background: #d16 ;
+        }
+
+        #square2 {
+            background: blue ;
+        }
+
+        #square3 {
+            margin: 100px ;
+            width: 100px ;
+            height: 100px ;
+            background: green ;
+            animation: spin 10s linear infinite ;
+        }
+
+        @keyframes spin { from { transform:rotate( 0deg ) ; } to { transform:rotate( 3600deg ) ; } }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Ch9: The Window Object.</h1>
+            <h2>The Browser Object Model</h2>
+            <p>
+                The <b>window</b> object is the global object in a browser.
+            </p>
+            <h2>Going Global</h2>
+            <p>
+                Global variables are actually properties of the <b>window</b> object in a
+                browser environment.
+            </p>
+            <h2>Dialogs</h2>
+            <p>
+                <b>alert</b>, <b>confirm()</b>, and <b>prompt()</b> are all methods of the window
+                object, and open dialogs that halt the execution of the program.
+            </p>
+            <h2>Browser Information</h2>
+            <p>
+                The <b>window.navigator</b> object gives information about the user's browser
+                and operating system, although it can be unreliable.
+            </p>
+            <h2>Location, Location, Location</h2>
+            <p>
+                The <b>window.location</b> object provides information about the URL of the
+                current page.
+            </p>
+            <h2>The Browser History</h2>
+            <p>
+                The <b>window.history</b> object keeps information about the pages that have been
+                visited in the session.
+            </p>
+            <h2>Controlling Windows</h2>
+            <p>
+                You can open, close, resize, and move windows (although, this doesn't mean you
+                should!).
+            </p>
+            <h2>Screen Information</h2>
+            <p>
+                The <b>window.screen</b> object provides information about the user's screen.
+            </p>
+            <h2>The Document Object</h2>
+            <p>
+                <b>document.write()</b> is an archaic method of writing text to the document
+                and should be avoided.
+            </p>
+            <h2>Cookies</h2>
+            <p>
+                Cookies can be used to store small pieces of information between requests
+                using the <b>document.cookie</b> property.
+            </p>
+            <h2>Timing Functions</h2>
+            <p>
+                The <b>window.setTimeout()</b> method can be used to invoke a function after
+                a set amount of time. It can be canceled using the <b>clearTimeout()</b> method.
+            </p>
+            <p>
+                The <b>window.setInterval()</b> method can be used to repeatedly invoke a function.
+                It can be stopped using the <b>clearInterval()</b> method.
+            </p>
+            <h2>Animation</h2>
+            <p>
+                The <b>window.requestAnimationFrame()</b> method can be used to produce smooth and
+                optimized animation by utilizing the browser's built-in graphics capabilities.
+                It can be canceled using the <b>cancelAnimationFrame()</b> method.
+            </p>
+            <h3>Without requestAnimationFrame</h3>
+            <section>
+                <div id="square"></div>
+            </section>
+            <h3>With requestAnimationFrame</h3>
+            <section>
+                <div id="square2"></div>
+            </section>
+            <h3>With CSS</h3>
+            <section>
+                <div id="square3"></div>
+            </section>
+        </div>
+        <div>
+            <h1>Ch14: HTML5 APIs.</h1>
+            <h2>HTML5</h2>
+            <p>
+                HTML5.1 is the latest incarnation of the Hypertext Markup Language.
+                It covers a variety of technologies, including several APIs that
+                are accessible using JavaScript.
+            </p>
+            <h2>The data- Attribute</h2>
+            <p>
+                <b>data-</b> attributes help to embed custom data into a web page that
+                can then be used to enhance the user experience with JavaScript.
+            </p>
+            <section id="hero" data-powers="flight superSpeed">
+                Superman
+            </section>
+            <h2>HTML5 Web Storage</h2>
+            <p>
+                The Web Storage API allows key-value pairs to be stored on the user's
+                device in a similar way to cookies, but without the same storage restrictions.
+            </p>
+            <h2>Geolocation</h2>
+            <p>
+                The Geolocation API allows you to access the geographic coordinates of the
+                user's device, as long as the user gives permission.
+            </p>
+            <h2>Web Workers</h2>
+            <p>
+                The Web Worker API can be used to perform computationally intensive tasks in
+                the background, which helps to avoid websites becoming unresponsive.
+            </p>
+            <h2>Websockets</h2>
+            <p>
+                Websockets are a new protocol for communicating over the internet, and
+                allow real-time, two-way communication.
+            </p>
+            <section>
+                <form>
+                    <label for='message'>Enter a Message:</label>
+                    <input type='text' name='message'>
+                    <button type='submit'>Submit</button>
+                </form>
+                <div id='output'></div>
+            </section>
+            <h2>Notifications</h2>
+            <p>
+                The Notification API allows you to display notifications on the user's system.
+            </p>
+            <h2>Multimedia</h2>
+            <p>
+                The &ltaudio&gt and &ltvideo&gt elements can be employed to embed audio tracks and
+                video clips in a web page. They also have a Media API that can help control
+                the playback using JavaScript.
+            </p>
+            <h2>Drawing with Canvas</h2>
+            <p>
+                The canvas element can be used to dynamically draw geometric shapes, text,
+                and images on a web page in real-time using JavaScript.
+            </p>
+            <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas element</canvas>
+            <h2>Shims and Polyfills</h2>
+            <p>
+                A shim or polyfill is a piece of code that adds support of missing features
+                to older browsers.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/ch9.js"></script>
+    <script src="js/ch14.js"></script>
+</body>
+</html>

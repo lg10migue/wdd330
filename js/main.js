@@ -168,6 +168,27 @@ const links = [
                 url : "week8/team_activity.html"
             }
         ]
+    },
+    {
+        label : "Week 9",
+        contents : [
+            {
+                label : "Notes",
+                url : "week9/notes.html"
+            },
+            {
+                label : "Ch9: Quiz Ninja",
+                url : "week9/ch9_quiz_ninja.html"
+            },
+            {
+                label : "Ch14: Quiz Ninja",
+                url : "week9/ch14_quiz_ninja.html"
+            },
+            {
+                label : "Team Activity: JS Drum Kit",
+                url : "week9/team_activity.html"
+            }
+        ]
     }
 ] ;
 
