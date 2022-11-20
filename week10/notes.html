@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+    <style>
+        /* HTML */
+
+        html {
+            font-family: "Open Sans", sans-serif ;
+            font-size: 16px ;
+        }
+
+        /* Body */
+
+        body {
+            min-height: 100vh ;
+            display: flex ;
+            flex-direction: column ;
+        }
+
+        /* Form Validation */
+
+        form {
+            font: 1em sans-serif ;
+            max-width: 320px ;
+        }
+
+        p > label {
+            display: block ;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], textarea, fieldset {
+            width: 100% ;
+            border: 1px solid #333 ;
+            box-sizing: border-box ;
+        }
+
+        input:invalid {
+            box-shadow: 0 0 5px 1px red ;
+        }
+
+        input:focus:invalid {
+            box-shadow: none ;
+        }
+
+        input[type="email"] {
+            appearance: none ;
+            width: 100% ;
+            border: 1px solid #333 ;
+            margin: 0 ;
+            font-family: inherit ;
+            font-size: 90% ;
+            box-sizing: border-box ;
+        }
+
+        /* This is our style for the invalid fields */
+        input[type="email"]:invalid {
+            border-color: #900 ;
+            background-color: #fdd ;
+        }
+
+        input:focus:invalid {
+            outline: none ;
+        }
+
+        /* This is the style of our error messages */
+        .error {
+            width: 100% ;
+            padding: 0 ;
+
+            font-size: 80% ;
+            color: white ;
+            background-color: #900 ;
+            border-radius: 0 0 5px 5px ;
+
+            box-sizing: border-box ;
+        }
+
+        .error.active {
+            padding: 0.3em ;
+        }
+
+        /* Header */
+
+        header, footer {
+            text-align: center ;
+            background-color: lightskyblue ;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 1em ;
+            margin-top: auto ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Client-side form validation.</h1>
+            <p>
+                Before submitting data to the server, it is important to ensure all required form
+                controls are filled out, in the correct format. This is called <b>client-side form
+                validation</b>, and helps ensure data submitted matches the requirements set forth in
+                the various form controls.
+            </p>
+            <h2>What is form validation?</h2>
+            <p>
+                When the browser and/or the web server will check to see that the
+                data is in the correct format and within the constraints set by the application.
+                Validation done in the browser is called client-side validation, while validation
+                done on the server is called server-side validation
+            </p>
+            <h2>Different types of client-side validation</h2>
+            <p>
+                <b>Built-in form validation</b> uses HTML form validation features, which we've discussed in
+                many places throughout this module. This validation generally doesn't require much
+                JavaScript. Built-in form validation has better performance than JavaScript, but it
+                is not as customizable as JavaScript validation.
+            </p>
+            <p>
+                <b>JavaScript</b> validation is coded using JavaScript. This validation is completely
+                customizable, but you need to create it all (or use a library).
+            </p>
+            <h2>Using built-in form validation</h2>
+            <p>
+                With the modern form controls, we can use validation attributes on form elements,
+                for example:
+            </p>
+            <ul>
+                <li>
+                    <b>required</b>: Specifies whether a form field needs to be filled in before the form can
+                    be submitted.
+                </li>
+                <li>
+                    <b>minlength and maxlength</b>: Specifies the minimum and maximum length of textual
+                    data (strings).
+                </li>
+                <li>
+                    <b>min and max</b>: Specifies the minimum and maximum values of numerical input types.
+                </li>
+                <li>
+                    <b>type</b>: Specifies whether the data needs to be a number, an email address, or
+                    some other specific preset type.
+                </li>
+                <li>
+                    <b>pattern</b>: Specifies a regular expression that defines a pattern the entered
+                    data needs to follow.
+                </li>
+            </ul>
+            <p>
+                When an element is valid, the following things are true:
+            </p>
+            <ul>
+                <li>
+                    The element matches the <b>:valid</b> CSS pseudo-class, which lets you apply a specific
+                    style to valid elements.
+                </li>
+                <li>
+                    If the user tries to send the data, the browser will submit the form, provided
+                    there is nothing else stopping it from doing so (e.g., JavaScript).
+                </li>
+            </ul>
+            <p>
+                When an element is invalid, the following things are true:
+            </p>
+            <ul>
+                <li>
+                    The element matches the <b>:invalid</b> CSS pseudo-class, and sometimes other UI
+                    pseudo-classes (e.g., :out-of-range) depending on the error, which lets you
+                    apply a specific style to invalid elements.
+                </li>
+                <li>
+                    If the user tries to send the data, the browser will block the form and display
+                    an error message.
+                </li>
+            </ul>
+            <section>
+                <form id="form-one">
+                    <p>
+                        <fieldset>
+                            <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
+                            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+                            <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+                        </fieldset>
+                    </p>
+                    <p>
+                        <label for="n1">How old are you?</label>
+                        <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+                    </p>
+                    <p>
+                        <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
+                        <input type="text" id="t1" name="fruit" list="l1" required pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+                        <datalist id="l1">
+                            <option>Banana</option>
+                            <option>Cherry</option>
+                            <option>Apple</option>
+                            <option>Strawberry</option>
+                            <option>Lemon</option>
+                            <option>Orange</option>
+                        </datalist>
+                    </p>
+                    <p>
+                        <label for="t2">What's your e-mail address?</label>
+                        <input type="email" id="t2" name="email">
+                    </p>
+                    <p>
+                        <label for="t3">Leave a short message</label>
+                        <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+                    </p>
+                    <p>
+                        <button>Submit</button>
+                    </p>
+                </form>                  
+            </section>
+            <h2>Validating forms using JavaScript</h2>
+            <p>
+                Most browsers support the <b>Constraint Validation API</b>, which consists of a set of
+                methods and properties available on the following form element DOM interfaces:
+            </p>
+            <ul>
+                <li>
+                    <b>HTMLButtonElement</b> (represents a &ltbutton&gt element)
+                </li>
+                <li>
+                    <b>HTMLFieldSetElement</b> (represents a &ltfieldset&gt element)
+                </li>
+                <li>
+                    <b>HTMLInputElement</b> (represents an &ltinput&gt element)
+                </li>
+                <li>
+                    <b>HTMLOutputElement</b> (represents an &ltoutput&gt element)
+                </li>
+                <li>
+                    <b>HTMLSelectElement</b> (represents a &ltselect&gt element)
+                </li>
+                <li>
+                    <b>HTMLTextAreaElement</b> (represents a &lttextarea&gt element)
+                </li>
+            </ul>
+            <p>
+                The Constraint validation API makes the following properties available on the above elements.
+            </p>
+            <ul>
+                <li>
+                    <b>validationMessage</b>: Returns a localized message describing the validation constraints
+                    that the control doesn't satisfy (if any). If the control is not a candidate for
+                    constraint validation ( <b>willValidate</b> is false) or the element's value satisfies
+                    its constraints (is valid), this will return an empty string.
+                </li>
+                <li>
+                    Returns a <b>ValidityState</b> object that contains several properties describing the
+                    validity state of the element.
+                </li>
+                <li>
+                    <b>willValidate</b>: Returns true if the element will be validated when the form is
+                    submitted; false otherwise.
+                </li>
+            </ul>
+            <p>
+                The Constraint Validation API also makes the following methods available on the above
+                elements and the form element.
+            </p>
+            <ul>
+                <li>
+                    <b>checkValidity()</b>: Returns true if the element's value has no validity problems;
+                    false otherwise. If the element is invalid, this method also fires an invalid
+                    event on the element.
+                </li>
+                <li>
+                    <b>reportValidity()</b>: Reports invalid field(s) using events. Useful in combination
+                    with <b>preventDefault()</b> in an onSubmit event handler
+                </li>
+                <li>
+                    <b>setCustomValidity(message)</b>: Adds a custom error message to the element; if you
+                    set a custom error message, the element is considered to be invalid, and the
+                    specified error is displayed. This lets you use JavaScript code to establish
+                    a validation failure other than those offered by the standard HTML validation
+                    constraints. The message is shown to the user when reporting the problem.
+                </li>
+            </ul>
+            <h2>Example with constraint validation API</h2>
+            <section>
+                <form novalidate id="form-two">
+                    <p>
+                        <label for="mail">
+                            <span>Please enter an email address:</span>
+                            <input type="email" id="mail" name="mail" required minlength="8" />
+                            <span class="error" aria-live="polite"></span>
+                        </label>
+                    </p>
+                    <button>Submit</button>
+                </form>
+            </section>
+            <h2>Example without constraint validation API</h2>
+            <section>
+                <form id="form-three">
+                    <p>
+                      <label for="mail-two">
+                        <span>Please enter an email address:</span>
+                        <input type="text" id="mail-two" name="mail-two" />
+                        <span class="error" aria-live="polite"></span>
+                      </label>
+                    </p>
+                    <button>Submit</button>
+                  </form>
+            </section>
+        </div>
+        <div>
+            <h1>Using the Fetch API.</h1>
+            <p>
+                The <b>Fetch API</b> provides a JavaScript interface for accessing and manipulating parts of the
+                protocol, such as requests and responses. It also provides a global <b>fetch()</b> method
+                that provides an easy, logical way to fetch resources asynchronously across the network.
+            </p>
+            <p>
+                The simplest use of fetch() takes one argument — the path to the resource you want to fetch
+                — and does not directly return the JSON response body but instead returns a promise that
+                resolves with a Response object.
+            </p>
+            <h2>Supplying request options</h2>
+            <p>
+                The fetch() method can optionally accept a second parameter, an init object that allows
+                you to control a number of different settings.
+            </p>
+            <h2>Sending a request with credentials included</h2>
+            <p>
+                To cause browsers to send a request with credentials included on both same-origin and
+                cross-origin calls, add credentials: 'include' to the init object you pass to the
+                fetch() method.
+            </p>
+            <p>
+                If you only want to send credentials if the request URL is on the same origin as the
+                calling script, add credentials: 'same-origin'.
+            </p>
+            <p>
+                To instead ensure browsers don't include credentials in the request, use
+                credentials: 'omit'.
+            </p>
+            <h2>Checking that the fetch was successful</h2>
+            <p>
+                A fetch() promise will reject with a TypeError when a network error is encountered
+                or CORS is misconfigured on the server-side, although this usually means permission
+                issues or similar. An accurate check for a successful fetch() would include checking
+                that the promise resolved, then checking that the Response.ok property has a value
+                of true.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            2022 | Miguel López | México
+        </p>
+    </footer>
+    <script src="js/form_validation.js"></script>
+    <script src="js/fetch_api.js"></script>
+</body>
+</html>

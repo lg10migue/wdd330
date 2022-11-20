@@ -189,6 +189,19 @@ const links = [
                 url : "week9/team_activity.html"
             }
         ]
+    },
+    {
+        label : "Week 10",
+        contents : [
+            {
+                label : "Notes",
+                url : "week10/notes.html"
+            },
+            {
+                label : "Team Activity: Local Quakes",
+                url : "week10/team_activity.html"
+            }
+        ]
     }
 ] ;
 
