@@ -202,6 +202,15 @@ const links = [
                 url : "week10/team_activity.html"
             }
         ]
+    },
+    {
+        label : "Week 11",
+        contents : [
+            {
+                label : "Team Activity: Authentication Example",
+                url : "week11/client/week11.html"
+            }
+        ]
     }
 ] ;
 

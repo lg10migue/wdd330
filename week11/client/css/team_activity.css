@@ -1,0 +1,103 @@
+/* HTML */
+
+html {
+    font-size: 16px ;
+}
+
+/* Body */
+
+body {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+/* Header */
+
+header {
+	margin: 0 ;
+    display: flex ;
+    justify-content: center ;
+}
+
+/* Main */
+
+main {
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+}
+
+/* Errors */
+
+.errors {
+    border: 1px solid darkred ;
+    background-color: lightcoral ;
+    padding: 0.5em ;
+}
+
+/* Forms */
+
+form {
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    background-color: rgb(201, 201, 201) ;
+    padding: .5em ;
+    border-radius: 5px ;
+    border: 1px solid gray ;
+}
+
+form input {
+    margin: 0.5em 0 ;
+    font-size: 1.4em ;
+    background-color: rgb(163, 201, 254) ;
+    width: 300px ;
+    border-radius: 5px ;
+}
+
+form button {
+    font-size: 1.2em ;
+    padding: 0.4em ;
+    background-color: cornflowerblue ;
+    border-radius: 5px ;
+    width: 25% ;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red ;
+}
+
+.hidden {
+    display: none ;
+}
+
+#createSubmit {
+    width: 25% ;
+}
+
+/* Posts */
+
+.posts {
+    margin: 1.5em 0 ;
+    text-align: center ;
+    background-color: rgb(46, 170, 252) ;
+    border: 1px solid rgb(0, 85, 165) ;
+    border-radius: 4px ;
+    padding: 1em ;
+    box-shadow: 10px 10px 10px rgb(68, 143, 255) ;
+}
+
+ul {
+    padding: 0 ;
+}
+
+ul li {
+    list-style-type: none ;
+    border: 1px solid rgb(0, 70, 128) ;
+    margin: .5em ;
+}
+
+ul li:hover {
+    transform: scale( 1.1 ) ;
+}
