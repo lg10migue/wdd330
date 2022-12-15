@@ -211,6 +211,15 @@ const links = [
                 url : "week11/client/week11.html"
             }
         ]
+    },
+    {
+        label : "Challenge Two: Pokédex App",
+        contents : [
+            {
+                label : "Pokédex App",
+                url : "pokedex/pokedex.html"
+            }
+        ]
     }
 ] ;
 
